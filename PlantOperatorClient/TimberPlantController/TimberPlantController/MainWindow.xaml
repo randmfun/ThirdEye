@@ -1,0 +1,22 @@
+﻿<Window x:Class="TimberPlantController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:TimberPlantController="clr-namespace:TimberPlantController" Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+        <Menu IsMainMenu="True">
+            <MenuItem Header="_System" >
+                <MenuItem Header="Print"/>
+                <MenuItem Header="Print Preview"/>
+                <MenuItem Header="Print Setup"/>
+            </MenuItem>
+            <MenuItem Header="_Setup" >
+                <MenuItem Header="Communication" Click="MenuItem_Setup_Communication_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Help" />
+        </Menu>
+        <DockPanel Name="dockpanel">
+            <TimberPlantController:BatchList></TimberPlantController:BatchList>
+        </DockPanel>
+        </StackPanel>
+    </Grid>
+</Window>
