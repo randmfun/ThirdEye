@@ -3,20 +3,36 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:TimberPlantController="clr-namespace:TimberPlantController" Title="MainWindow" Height="350" Width="525">
     <Grid>
         <StackPanel>
-        <Menu IsMainMenu="True">
-            <MenuItem Header="_System" >
-                <MenuItem Header="Print"/>
-                <MenuItem Header="Print Preview"/>
-                <MenuItem Header="Print Setup"/>
-            </MenuItem>
-            <MenuItem Header="_Setup" >
-                <MenuItem Header="Communication" Click="MenuItem_Setup_Communication_Click"/>
-            </MenuItem>
-            <MenuItem Header="_Help" />
-        </Menu>
-        <DockPanel Name="dockpanel">
-            <TimberPlantController:BatchList></TimberPlantController:BatchList>
-        </DockPanel>
+            <Menu IsMainMenu="True">
+
+                <MenuItem Header="_System" >
+                    <MenuItem Header="Print..."/>
+                    <MenuItem Header="Print Preview"/>
+                    <MenuItem Header="Print Setup..."/>
+                    <Separator />
+                    <MenuItem Header="Change Password..."/>
+                    <Separator />
+                    <MenuItem Header="Exit"/>
+                </MenuItem>
+
+                <MenuItem Header="_Setup" >
+                    <MenuItem Header="Communication" Click="MenuItem_Setup_Communication_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="_Archive" >
+                    <MenuItem Header="Open..." Click="MenuItem_Setup_Communication_Click"/>
+                    <MenuItem Header="Close" Click="MenuItem_Setup_Communication_Click"/>
+                    <MenuItem Header="Save..." Click="MenuItem_Setup_Communication_Click"/>
+                    <MenuItem Header="Export To Excel..." Click="MenuItem_Setup_Communication_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="_Help" />
+
+            </Menu>
+
+            <DockPanel Name="dockpanel">
+                <TimberPlantController:BatchList></TimberPlantController:BatchList>
+            </DockPanel>
         </StackPanel>
     </Grid>
 </Window>

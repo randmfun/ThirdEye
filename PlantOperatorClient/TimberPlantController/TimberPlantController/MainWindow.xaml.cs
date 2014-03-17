@@ -29,5 +29,11 @@ namespace TimberPlantController
             var obj = new CommunicationSetup();
             obj.ShowDialog();
         }
+
+        private void ReadData()
+        {
+            
+        }
+
     }
 }

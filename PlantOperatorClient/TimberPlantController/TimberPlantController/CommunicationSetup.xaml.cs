@@ -18,7 +18,7 @@ namespace TimberPlantController
     /// </summary>
     public partial class CommunicationSetup : Window
     {
-        CommunicationConfigViewModel communicationConfigViewModel = new CommunicationConfigViewModel();
+        static CommunicationConfigViewModel communicationConfigViewModel = new CommunicationConfigViewModel();
         public CommunicationSetup()
         {
             InitializeComponent();
@@ -27,8 +27,13 @@ namespace TimberPlantController
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = this.communicationConfigViewModel.SelectedDataBit;
-            var d = this.communicationConfigViewModel.SelectedStopBit;
+            var s = communicationConfigViewModel.SelectedDataBit;
+            var d = communicationConfigViewModel.SelectedStopBit;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
     }

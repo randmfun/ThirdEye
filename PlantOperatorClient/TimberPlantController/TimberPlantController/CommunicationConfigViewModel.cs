@@ -43,6 +43,11 @@ namespace TimberPlantController
             get { return this.RadioStopBits.Find(item => item.CheckedProperty).Header; }
         }
 
+        public CommunicationConfigViewModel Clone()
+        {
+            return (CommunicationConfigViewModel)this.MemberwiseClone();
+        }
+
         private List<RadioClass> radioDataBits;
         public List<RadioClass> RadioDataBits
         {
@@ -78,7 +83,7 @@ namespace TimberPlantController
         private List<RadioClass> getRadioStopBits()
         {
             List<RadioClass> list = new List<RadioClass>();
-            list.Add(new RadioClass { Header = "1", CheckedProperty = false });
+            list.Add(new RadioClass { Header = "1", CheckedProperty = true });
             list.Add(new RadioClass { Header = "1.5", CheckedProperty = false });
             list.Add(new RadioClass { Header = "2", CheckedProperty = false });
             return list;
@@ -87,7 +92,7 @@ namespace TimberPlantController
         private List<RadioClass> GetRadioPartiyBits()
         {
             List<RadioClass> list = new List<RadioClass>();
-            list.Add(new RadioClass { Header = "No", CheckedProperty = false });
+            list.Add(new RadioClass { Header = "No", CheckedProperty = true });
             list.Add(new RadioClass { Header = "Odd", CheckedProperty = false });
             list.Add(new RadioClass { Header = "Even", CheckedProperty = false });
             return list;
@@ -99,7 +104,7 @@ namespace TimberPlantController
             list.Add(new RadioClass { Header = "5", CheckedProperty = false });
             list.Add(new RadioClass { Header = "6", CheckedProperty = false });
             list.Add(new RadioClass { Header = "7", CheckedProperty = false });
-            list.Add(new RadioClass { Header = "8", CheckedProperty = false });
+            list.Add(new RadioClass { Header = "8", CheckedProperty = true });
             return list;            
         }
 
