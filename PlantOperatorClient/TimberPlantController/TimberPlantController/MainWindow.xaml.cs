@@ -35,5 +35,10 @@ namespace TimberPlantController
             
         }
 
+        private void GenerateBarCode(object sender, RoutedEventArgs e)
+        {
+            this.dockpanel.Children.Add(new BarCodeDemoCtrl());
+        }
+
     }
 }

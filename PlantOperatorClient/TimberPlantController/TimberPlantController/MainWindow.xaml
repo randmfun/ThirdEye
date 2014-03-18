@@ -6,6 +6,7 @@
             <Menu IsMainMenu="True">
 
                 <MenuItem Header="_System" >
+                    <MenuItem Header="Generate Bar Code" Click="GenerateBarCode"/>
                     <MenuItem Header="Print..."/>
                     <MenuItem Header="Print Preview"/>
                     <MenuItem Header="Print Setup..."/>
@@ -31,7 +32,7 @@
             </Menu>
 
             <DockPanel Name="dockpanel">
-                <TimberPlantController:BatchList></TimberPlantController:BatchList>
+                <!--<TimberPlantController:BatchList></TimberPlantController:BatchList>-->
             </DockPanel>
         </StackPanel>
     </Grid>
