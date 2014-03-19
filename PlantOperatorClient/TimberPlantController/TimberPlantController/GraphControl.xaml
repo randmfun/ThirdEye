@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="TimberPlantController.GraphControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Charting="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" 
+             mc:Ignorable="d" 
+             >
+    <Grid>
+        <Charting:Chart  Name="lineChart" Title="Line Series Demo" VerticalAlignment="Top" Height="254">
+            <Charting:LineSeries  DependentValuePath="Value" IndependentValuePath="Key" ItemsSource="{Binding}" IsSelectionEnabled="True"/>
+        </Charting:Chart>
+    </Grid>
+</UserControl>

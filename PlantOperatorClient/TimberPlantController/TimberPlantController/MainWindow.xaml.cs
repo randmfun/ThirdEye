@@ -37,7 +37,15 @@ namespace TimberPlantController
 
         private void GenerateBarCode(object sender, RoutedEventArgs e)
         {
+            this.dockpanel.Children.Clear();
             this.dockpanel.Children.Add(new BarCodeDemoCtrl());
+        }
+
+        private void ClickGraphView(object sender, RoutedEventArgs e)
+        {
+            this.dockpanel.Children.Clear();
+            this.dockpanel.Children.Add(new GraphControl());
+
         }
 
     }

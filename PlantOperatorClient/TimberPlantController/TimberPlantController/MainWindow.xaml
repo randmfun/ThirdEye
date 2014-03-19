@@ -16,6 +16,10 @@
                     <MenuItem Header="Exit"/>
                 </MenuItem>
 
+                <MenuItem Header="_Views" >
+                    <MenuItem Header="Graph.." Click="ClickGraphView"/>
+                </MenuItem>
+
                 <MenuItem Header="_Setup" >
                     <MenuItem Header="Communication" Click="MenuItem_Setup_Communication_Click"/>
                 </MenuItem>
