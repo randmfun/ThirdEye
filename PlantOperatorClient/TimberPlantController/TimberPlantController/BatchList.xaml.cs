@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DataModel;
+using Randmfun.DataModel;
 
 namespace TimberPlantController
 {
@@ -25,14 +25,15 @@ namespace TimberPlantController
         public BatchList()
         {
             InitializeComponent();
+
             PopulateTemp();
 
-            this.DataContext = this;
+            this.DataContext = _sensorCollection;
         }
 
-        private ObservableCollection<SensorDataModel> _sensorCollection = new ObservableCollection<SensorDataModel>(); 
+        private SensorDataModel _sensorCollection = new SensorDataModel(); 
 
-        public ObservableCollection<SensorDataModel> SensorCollection
+        public SensorDataModel SensorCollection
         {
             get { return _sensorCollection; }
             set
@@ -52,10 +53,11 @@ namespace TimberPlantController
 
         private void PopulateTemp()
         {
-            this._sensorCollection.Add(new SensorDataModel());
-            this._sensorCollection.Add(new SensorDataModel());
-            this._sensorCollection.Add(new SensorDataModel());
-            this._sensorCollection.Add(new SensorDataModel());
+            _sensorCollection.SensorCollection = new ObservableCollection<SensorModel>();
+            _sensorCollection.SensorCollection.Add(new SensorModel());
+            _sensorCollection.SensorCollection.Add(new SensorModel());
+            _sensorCollection.SensorCollection.Add(new SensorModel());
+            _sensorCollection.SensorCollection.Add(new SensorModel());
         }
     }
 }

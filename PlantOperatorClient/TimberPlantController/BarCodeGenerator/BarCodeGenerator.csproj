@@ -8,7 +8,7 @@
     <ProjectGuid>{D3A93771-6A17-41D7-B5C6-FBC8A7B46F43}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BarCodeGenerator</RootNamespace>
+    <RootNamespace>Randmfun.BarCodeGenerator</RootNamespace>
     <AssemblyName>BarCodeGenerator</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

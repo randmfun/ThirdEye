@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ScanLib
+﻿namespace Randmfun.ScanLib
 {
     public class Scanner
     {

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO.Ports;
-using System.Linq;
-using System.Text;
+using Randmfun.DataModel;
 
-namespace ScanLib
+namespace Randmfun.ScanLib
 {
     public class SerialIoLayer : ISerialIo
     {

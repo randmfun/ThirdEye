@@ -26,8 +26,7 @@ namespace TimberPlantController
 
         private void MenuItem_Setup_Communication_Click(object sender, RoutedEventArgs e)
         {
-            var obj = new CommunicationSetup();
-            obj.ShowDialog();
+            new CommunicationSetup().ShowDialog();
         }
 
         private void GenerateBarCode(object sender, RoutedEventArgs e)
@@ -46,6 +45,11 @@ namespace TimberPlantController
         {
             this.dockpanel.Children.Clear();
             this.dockpanel.Children.Add(new BatchList());
+        }
+
+        private void ClickSaveArchive(object sender, RoutedEventArgs e)
+        {
+            new SaveArchive().ShowDialog();
         }
     }
 }

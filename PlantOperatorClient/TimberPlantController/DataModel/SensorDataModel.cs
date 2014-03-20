@@ -1,52 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
+using ProtoBuf;
 
-namespace DataModel
+namespace Randmfun.DataModel
 {
+    [ProtoContract()]
     public class SensorDataModel : INotifyPropertyChanged
     {
-        private DateTime _dateTime = System.DateTime.Now;
-        public DateTime DateTime
+        private DateTime _startDateTime = System.DateTime.Now;
+        [ProtoMember(1)]
+        public DateTime StartDateTime
         {
-            get { return _dateTime; }
+            get { return _startDateTime; }
             set
             {
-                _dateTime = value;
-                this.OnNotifyPropertyChanged("DateTime");
+                _startDateTime = value;
+                this.OnNotifyPropertyChanged("StartDateTime");
             }
         }
 
-        private string _sensor1 = "0.0";
-        public string Sensor1
+        private string _detailsName = string.Empty;
+        [ProtoMember(2)]
+        public string DetailsName
         {
-            get { return _sensor1; }
-            set { _sensor1 = value;
-            this.OnNotifyPropertyChanged("Sensor1");
+            get { return _detailsName; }
+            set
+            {
+                _detailsName = value;
+                this.OnNotifyPropertyChanged("DetailsName");
             }
         }
 
-        private string _sensor2= "0.0";
-        public string Sensor2
+        private string _detailsDesc = string.Empty;
+        [ProtoMember(3)]
+        public string DetailsDesc
         {
-            get { return _sensor2; }
+            get { return _detailsDesc; }
             set
             {
-                _sensor2 = value;
-                this.OnNotifyPropertyChanged("Sensor2");
+                _detailsDesc = value;
+                this.OnNotifyPropertyChanged("DetailsDesc");
             }
         }
 
-        private string _sensor3 ="0.0";
-        public string Sensor3
+        private ObservableCollection<SensorModel> _sensorCollection = new ObservableCollection<SensorModel>();
+        [ProtoMember(4)]
+        public ObservableCollection<SensorModel> SensorCollection
         {
-            get { return _sensor3; }
+            get { return _sensorCollection; }
             set
             {
-                _sensor3 = value;
-                this.OnNotifyPropertyChanged("Sensor3");
+                _sensorCollection = value;
+                this.OnNotifyPropertyChanged("SensorCollection");
             }
         }
 
@@ -54,7 +60,7 @@ namespace DataModel
 
         private void OnNotifyPropertyChanged(string propertyName)
         {
-            if(this.PropertyChanged != null)
+            if (this.PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
     }

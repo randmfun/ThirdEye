@@ -45,10 +45,19 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CryptographerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="SerializeTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Archiver\Archiver.csproj">
+      <Project>{DA75A52A-3D24-457C-9360-45ABFB7F8EE3}</Project>
+      <Name>Archiver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{BA56DC3A-2789-4339-BE1D-B00C030B8289}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ScanLib\ScanLib.csproj">
       <Project>{F6493270-E791-485F-A514-A252519B2BFF}</Project>
       <Name>ScanLib</Name>

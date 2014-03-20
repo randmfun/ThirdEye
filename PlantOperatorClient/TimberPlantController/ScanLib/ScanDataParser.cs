@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Randmfun.DataModel;
 
-namespace ScanLib
+namespace Randmfun.ScanLib
 {
     public class ScanDataParser
     {
@@ -41,35 +38,11 @@ namespace ScanLib
             if (readerIndex == 0)
             {
                 currentModel = new SensorModel();
-                currentModel.Sensor_1 = value;
-            }
-            else if(readerIndex == 1)
-            {
-                currentModel.Sensor_2 = value;
-            }
-            else if (readerIndex == 2)
-            {
-                currentModel.Sensor_3 = value;
-            }
-            else if (readerIndex == 3)
-            {
-                currentModel.Sensor_4 = value;
-            }
-            else if (readerIndex == 4)
-            {
-                currentModel.Sensor_5 = value;
-            }
-            else if (readerIndex == 5)
-            {
-                currentModel.Sensor_6 = value;
-            }
-            else if (readerIndex == 6)
-            {
-                currentModel.Sensor_7 = value;
+                currentModel.Sensor1 = value;
             }
             else if (readerIndex == 7)
             {
-                currentModel.Sensor_8 = value;
+                currentModel.Sensor1 = value;
                 NotifyLogData(CommunicationState.Reading, new SerialDataArgs(currentModel));
             }
 

@@ -1,8 +1,7 @@
 using System;
 using System.Drawing;
-using System.Diagnostics;
 
-namespace GenCode128
+namespace Randmfun.BarCodeGenerator
 {
 	/// <summary>
 	/// Summary description for Code128Rendering.

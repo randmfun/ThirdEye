@@ -1,7 +1,6 @@
-using System;
 using System.Text;
 
-namespace GenCode128
+namespace Randmfun.BarCodeGenerator
 {
    public enum CodeSet
    {
