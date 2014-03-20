@@ -138,6 +138,10 @@
       <Project>{D3A93771-6A17-41D7-B5C6-FBC8A7B46F43}</Project>
       <Name>BarCodeGenerator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{BA56DC3A-2789-4339-BE1D-B00C030B8289}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -30,11 +30,6 @@ namespace TimberPlantController
             obj.ShowDialog();
         }
 
-        private void ReadData()
-        {
-            
-        }
-
         private void GenerateBarCode(object sender, RoutedEventArgs e)
         {
             this.dockpanel.Children.Clear();
@@ -45,8 +40,12 @@ namespace TimberPlantController
         {
             this.dockpanel.Children.Clear();
             this.dockpanel.Children.Add(new GraphControl());
-
         }
 
+        private void ClickListView(object sender, RoutedEventArgs e)
+        {
+            this.dockpanel.Children.Clear();
+            this.dockpanel.Children.Add(new BatchList());
+        }
     }
 }

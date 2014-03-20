@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("TimberPlantController")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Randmfun")]
 [assembly: AssemblyProduct("TimberPlantController")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
+[assembly: AssemblyCopyright("Copyright © Randmfun")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

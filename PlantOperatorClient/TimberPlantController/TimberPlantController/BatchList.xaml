@@ -4,8 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             >
     <Grid>
-        <DataGrid Name="batchList"></DataGrid>
+        <DataGrid AlternatingRowBackground="#FFC4B0B0" AutoGenerateColumns="False" Name="grdSensor" ItemsSource="{Binding SensorCollection}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding DateTime}" Width="100" Header="Date Time"/>
+                <DataGridTextColumn Binding="{Binding Sensor1}" Width="100" Header="Sensor1"/>
+                <DataGridTextColumn Binding="{Binding Sensor2}" Width="100" Header="Sensor2"/>
+                <DataGridTextColumn Binding="{Binding Sensor3}" Width="100" Header="Sensor3"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
