@@ -62,9 +62,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Authenticate.xaml.cs">
+      <DependentUpon>Authenticate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SaveArchive.xaml.cs">
       <DependentUpon>SaveArchive.xaml</DependentUpon>
     </Compile>
+    <Page Include="Authenticate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BarCodeDemoCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

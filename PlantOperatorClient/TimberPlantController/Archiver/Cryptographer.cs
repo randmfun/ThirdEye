@@ -12,7 +12,8 @@ namespace Randmfun.Archiver
 
             var algorithm = GetAlgorithm(password);
 
-            var length = memoryStream.Length > 1024 ? 1024 : memoryStream.Length;
+            //var length = memoryStream.Length > 1024 ? 1024 : memoryStream.Length;
+            var length = 1;
             var fileData = new byte[length];
 
             var encryptedStream = new CryptoStream(fs, algorithm.CreateEncryptor(), CryptoStreamMode.Write);
@@ -37,7 +38,9 @@ namespace Randmfun.Archiver
             
             var algorithm = GetAlgorithm(password);
 
-            var length = inFile.Length > 1024 ? 1024 : inFile.Length;
+            //There could be a case, where more data is appended than required, as a result Serialization fails
+            //var length = inFile.Length > 1024 ? 1024 : inFile.Length;
+            var length = 1;
             var fileData = new byte[length];
 
             var encryptedStream = new CryptoStream(inFile, algorithm.CreateDecryptor(), CryptoStreamMode.Read);

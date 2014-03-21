@@ -16,21 +16,23 @@ namespace ScanLibTest
         {
             var outputFile = Path.Combine(Path.GetTempPath(), Path.GetTempFileName());
 
-            var sensorDataModel = new SensorDataModel();
-            sensorDataModel.DetailsName = "Details Name";
-            sensorDataModel.DetailsDesc = "DetailsDesc";
+            var sensorDataModelExpected = new SensorDataModel();
+            sensorDataModelExpected.DetailsName = "Details Name";
+            sensorDataModelExpected.DetailsDesc = "DetailsDesc";
 
-            sensorDataModel.SensorCollection.Add(new SensorModel());
-            sensorDataModel.SensorCollection.Add(new SensorModel());
-            sensorDataModel.SensorCollection.Add(new SensorModel());
+            for (int i = 0; i < 100; i++ )
+                sensorDataModelExpected.SensorCollection.Add(new SensorModel(){Sensor1 = i.ToString()});
 
-            Randmfun.Archiver.Serializer.SerializeData(sensorDataModel, outputFile);
+            Randmfun.Archiver.Serializer.SerializeData(sensorDataModelExpected, outputFile);
 
             var sensorDataModelActual = Randmfun.Archiver.Serializer.DeSerializeData(outputFile);
 
             Assert.AreEqual(sensorDataModelActual.DetailsDesc, sensorDataModelActual.DetailsDesc);
             Assert.AreEqual(sensorDataModelActual.DetailsName, sensorDataModelActual.DetailsName);
-            Assert.AreEqual(sensorDataModelActual.SensorCollection[0].DateTime, sensorDataModel.SensorCollection[0].DateTime);
+            Assert.AreEqual(sensorDataModelExpected.SensorCollection.Count, sensorDataModelActual.SensorCollection.Count);
+
+            for (int i = 0; i < 100; i++)
+                Assert.AreEqual(sensorDataModelActual.SensorCollection[i].Sensor1, sensorDataModelExpected.SensorCollection[i].Sensor1);
         }
     }
 }

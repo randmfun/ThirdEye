@@ -14,7 +14,7 @@
                     <Separator />
                     <MenuItem Header="Change Password..."/>
                     <Separator />
-                    <MenuItem Header="Exit"/>
+                    <MenuItem Header="Exit" Click="ExitClick"/>
                 </MenuItem>
 
                 <MenuItem Header="_Views" >

@@ -22,6 +22,12 @@ namespace TimberPlantController
         public MainWindow()
         {
             InitializeComponent();
+
+            var result = new Authenticate().ShowDialog();
+            if (!(result.HasValue && result.Value))
+            {
+                this.Close();
+            }
         }
 
         private void MenuItem_Setup_Communication_Click(object sender, RoutedEventArgs e)
@@ -51,5 +57,11 @@ namespace TimberPlantController
         {
             new SaveArchive().ShowDialog();
         }
+
+        private void ExitClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        
     }
 }
