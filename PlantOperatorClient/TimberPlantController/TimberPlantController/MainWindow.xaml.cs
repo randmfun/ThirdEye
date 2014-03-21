@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace TimberPlantController
 {
@@ -51,6 +52,24 @@ namespace TimberPlantController
         {
             this.dockpanel.Children.Clear();
             this.dockpanel.Children.Add(new BatchList());
+        }
+
+        private void OpenArchiveClick(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog()
+                                                {
+                                                    Title = "Select Archive File",
+                                                    DefaultExt = ".bin",
+                                                    Filter = "Binary-file (.bin)|*.bin",
+                                                    CheckFileExists = true
+                                                };
+            if (openFileDialog.ShowDialog() == true)
+            {
+                var fileName = openFileDialog.FileName;
+
+                var sensorDataModel = Randmfun.Archiver.Serializer.DeSerializeData(fileName);
+                ThirdEyeApplicationContext.SetCurrentSensorModel(sensorDataModel);
+            }
         }
 
         private void ClickSaveArchive(object sender, RoutedEventArgs e)

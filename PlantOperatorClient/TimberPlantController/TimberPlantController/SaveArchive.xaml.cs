@@ -24,20 +24,31 @@ namespace TimberPlantController
 
         public SaveArchive()
         {
+            this.Owner = Application.Current.MainWindow;
             InitializeComponent();
             this.DataContext = saveArchiveViewModel;
         }
 
         private void SaveClick(object sender, RoutedEventArgs e)
         {
-            var sensorDataModel = GetCurrentSensorDataModel();
+            try
+            {
+                var sensorDataModel = GetCurrentSensorDataModel();
 
-            sensorDataModel.DetailsDesc = this.saveArchiveViewModel.DetailsDesc;
-            sensorDataModel.DetailsName = this.saveArchiveViewModel.DetailsName;
+                sensorDataModel.DetailsDesc = this.saveArchiveViewModel.DetailsDesc;
+                sensorDataModel.DetailsName = this.saveArchiveViewModel.DetailsName;
 
-            var fileFullPath = Path.Combine(this.saveArchiveViewModel.FilePath, this.saveArchiveViewModel.FileName);
+                var fileFullPath = Path.Combine(this.saveArchiveViewModel.FilePath, this.saveArchiveViewModel.FileName);
 
-            Randmfun.Archiver.Serializer.SerializeData(sensorDataModel, fileFullPath);
+                Randmfun.Archiver.Serializer.SerializeData(sensorDataModel, fileFullPath);
+
+                MessageBox.Show("Archived Sucessfully at" + fileFullPath);
+                this.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Archive FAILED " + exception.Message + exception.InnerException);
+            }
         }
 
         private void CancelClick(object sender, RoutedEventArgs e)
@@ -47,7 +58,7 @@ namespace TimberPlantController
 
         private SensorDataModel GetCurrentSensorDataModel()
         {
-            return new SensorDataModel();
+            return ThirdEyeApplicationContext.GetCurrentSensorDataModel();
         }
 
     }

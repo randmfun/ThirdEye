@@ -18,17 +18,19 @@ namespace TimberPlantController
     /// </summary>
     public partial class CommunicationSetup : Window
     {
-        static CommunicationConfigViewModel communicationConfigViewModel = new CommunicationConfigViewModel();
+        private readonly CommunicationConfigViewModel communicationConfigViewModel;
         public CommunicationSetup()
         {
             InitializeComponent();
+
+            communicationConfigViewModel = ThirdEyeApplicationContext.GetCommunicationConfigViewModel();
             this.DataContext = communicationConfigViewModel;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OkClick(object sender, RoutedEventArgs e)
         {
-            var s = communicationConfigViewModel.SelectedDataBit;
-            var d = communicationConfigViewModel.SelectedStopBit;
+            ThirdEyeApplicationContext.SetCommunicationConfigViewModel(communicationConfigViewModel);
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

@@ -3,43 +3,52 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
         Title="Third Eye" Height="450" Width="525">
     <Grid>
-        <StackPanel>
-            <Menu IsMainMenu="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Menu IsMainMenu="True" Grid.Row="0">
 
-                <MenuItem Header="_System" >
-                    <MenuItem Header="Generate Bar Code" Click="GenerateBarCode"/>
-                    <MenuItem Header="Print..."/>
-                    <MenuItem Header="Print Preview"/>
-                    <MenuItem Header="Print Setup..."/>
-                    <Separator />
-                    <MenuItem Header="Change Password..."/>
-                    <Separator />
-                    <MenuItem Header="Exit" Click="ExitClick"/>
-                </MenuItem>
+            <MenuItem Header="_System" >
+                <MenuItem Header="Generate Bar Code" Click="GenerateBarCode"/>
+                <MenuItem Header="Print..."/>
+                <MenuItem Header="Print Preview"/>
+                <MenuItem Header="Print Setup..."/>
+                <Separator />
+                <MenuItem Header="Change Password..."/>
+                <Separator />
+                <MenuItem Header="Exit" Click="ExitClick"/>
+            </MenuItem>
 
-                <MenuItem Header="_Views" >
-                    <MenuItem Header="Graph.." Click="ClickGraphView"/>
-                    <MenuItem Header="List.." Click="ClickListView"/>
-                </MenuItem>
+            <MenuItem Header="_Views" >
+                <MenuItem Header="Graph.." Click="ClickGraphView"/>
+                <MenuItem Header="List.." Click="ClickListView"/>
+            </MenuItem>
 
-                <MenuItem Header="_Setup" >
-                    <MenuItem Header="Communication" Click="MenuItem_Setup_Communication_Click"/>
-                </MenuItem>
+            <MenuItem Header="_Setup" >
+                <MenuItem Header="Communication" Click="MenuItem_Setup_Communication_Click"/>
+            </MenuItem>
 
-                <MenuItem Header="_Archive" >
-                    <MenuItem Header="Open..." Click="MenuItem_Setup_Communication_Click"/>
-                    <MenuItem Header="Close" Click="MenuItem_Setup_Communication_Click"/>
-                    <MenuItem Header="Save..." Click="ClickSaveArchive"/>
-                    <MenuItem Header="Export To Excel..." Click="MenuItem_Setup_Communication_Click"/>
-                </MenuItem>
+            <MenuItem Header="_Archive" >
+                <MenuItem Header="Open..." Click="OpenArchiveClick"/>
+                <MenuItem Header="Close" Click="MenuItem_Setup_Communication_Click"/>
+                <MenuItem Header="Save..." Click="ClickSaveArchive"/>
+                <MenuItem Header="Export To Excel..." Click="MenuItem_Setup_Communication_Click"/>
+            </MenuItem>
 
-                <MenuItem Header="_Help" />
+            <MenuItem Header="_Help" />
 
-            </Menu>
+        </Menu>
 
-            <DockPanel Name="dockpanel">
-                <!--<TimberPlantController:BatchList></TimberPlantController:BatchList>-->
-            </DockPanel>
-        </StackPanel>
+
+        <StackPanel Name="dockpanel" Grid.Row="1"/>
+
+        <Border BorderThickness="1" BorderBrush="Gray" Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Archive File: "/>
+                <Label Name="lblFilePath"  Content="Archive File: "/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

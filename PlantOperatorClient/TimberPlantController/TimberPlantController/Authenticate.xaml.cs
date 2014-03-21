@@ -57,7 +57,7 @@ namespace TimberPlantController
 
     public class AuthenticateViewModel: INotifyPropertyChanged
     {
-        private string _password = string.Empty;
+        private string _password = "thirdeye";
         public string Password
         {
             get { return _password; }

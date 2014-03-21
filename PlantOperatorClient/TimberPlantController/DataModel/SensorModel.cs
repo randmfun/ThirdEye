@@ -31,7 +31,7 @@ namespace Randmfun.DataModel
             }
         }
 
-        private string _sensor2 = "0.0";
+        private string _sensor2 = "0";
         [ProtoMember(3)]
         public string Sensor2
         {

@@ -28,18 +28,21 @@ namespace TimberPlantController
 
             PopulateTemp();
 
-            this.DataContext = _sensorCollection;
+            this.DataContext = _sensorDataModel;
         }
 
-        private SensorDataModel _sensorCollection = new SensorDataModel(); 
+        private SensorDataModel _sensorDataModel; 
 
-        public SensorDataModel SensorCollection
+        public SensorDataModel SensorDataModel
         {
-            get { return _sensorCollection; }
+            get
+            {
+                return _sensorDataModel ?? ThirdEyeApplicationContext.GetCurrentSensorDataModel();
+            }
             set
             {
-                _sensorCollection = value;
-                OnNotifyPropertyChanged("SensorCollection");
+                _sensorDataModel = value;
+                OnNotifyPropertyChanged("SensorDataModel");
             }
         }
 
@@ -53,11 +56,14 @@ namespace TimberPlantController
 
         private void PopulateTemp()
         {
-            _sensorCollection.SensorCollection = new ObservableCollection<SensorModel>();
-            _sensorCollection.SensorCollection.Add(new SensorModel());
-            _sensorCollection.SensorCollection.Add(new SensorModel());
-            _sensorCollection.SensorCollection.Add(new SensorModel());
-            _sensorCollection.SensorCollection.Add(new SensorModel());
+            _sensorDataModel = new SensorDataModel();
+            _sensorDataModel.SensorCollection = new ObservableCollection<SensorModel>();
+            for (int i = 0, j=10; i < 50; i++, j++)
+            {
+                _sensorDataModel.SensorCollection.Add(new SensorModel(){Sensor1 = i.ToString(), Sensor2 = j.ToString()});
+            }
+
+            ThirdEyeApplicationContext.SetCurrentSensorModel(_sensorDataModel);
         }
     }
 }
