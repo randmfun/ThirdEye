@@ -12,6 +12,10 @@
 
             <MenuItem Header="_System" >
                 <MenuItem Header="Generate Bar Code" Click="GenerateBarCode"/>
+                <MenuItem Header="Start.." Click="StartClick"/>
+                <MenuItem Header="LoadDummyData.." Click="LoadDummyDataClick"/>
+                <MenuItem Header="ClearView.." Click="CloseViewsClick"/>
+                <Separator/>
                 <MenuItem Header="Print..."/>
                 <MenuItem Header="Print Preview"/>
                 <MenuItem Header="Print Setup..."/>
@@ -32,9 +36,9 @@
 
             <MenuItem Header="_Archive" >
                 <MenuItem Header="Open..." Click="OpenArchiveClick"/>
-                <MenuItem Header="Close" Click="MenuItem_Setup_Communication_Click"/>
+                <MenuItem Header="Close" />
                 <MenuItem Header="Save..." Click="ClickSaveArchive"/>
-                <MenuItem Header="Export To Excel..." Click="MenuItem_Setup_Communication_Click"/>
+                <MenuItem Header="Export To Excel..."/>
             </MenuItem>
 
             <MenuItem Header="_Help" />
@@ -46,8 +50,14 @@
 
         <Border BorderThickness="1" BorderBrush="Gray" Grid.Row="2">
             <StackPanel Orientation="Horizontal">
-                <Label Content="Archive File: "/>
-                <Label Name="lblFilePath"  Content="Archive File: "/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Archive File: "/>
+                    <Label Name="lblFilePath"  Content=""/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Detail Name : "/>
+                    <Label Name="lblDetailName"  Content=""/>
+                </StackPanel>
             </StackPanel>
         </Border>
     </Grid>

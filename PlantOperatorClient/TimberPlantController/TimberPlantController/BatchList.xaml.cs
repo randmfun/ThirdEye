@@ -25,10 +25,7 @@ namespace TimberPlantController
         public BatchList()
         {
             InitializeComponent();
-
-            PopulateTemp();
-
-            this.DataContext = _sensorDataModel;
+            this.DataContext = SensorDataModel;
         }
 
         private SensorDataModel _sensorDataModel; 
@@ -52,18 +49,6 @@ namespace TimberPlantController
         {
             if (this.PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private void PopulateTemp()
-        {
-            _sensorDataModel = new SensorDataModel();
-            _sensorDataModel.SensorCollection = new ObservableCollection<SensorModel>();
-            for (int i = 0, j=10; i < 50; i++, j++)
-            {
-                _sensorDataModel.SensorCollection.Add(new SensorModel(){Sensor1 = i.ToString(), Sensor2 = j.ToString()});
-            }
-
-            ThirdEyeApplicationContext.SetCurrentSensorModel(_sensorDataModel);
         }
     }
 }

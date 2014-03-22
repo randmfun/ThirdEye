@@ -11,6 +11,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Research.DynamicDataDisplay;
+using Microsoft.Research.DynamicDataDisplay.DataSources;
+using Microsoft.Research.DynamicDataDisplay.PointMarkers;
 using Randmfun.DataModel;
 
 namespace TimberPlantController
@@ -27,28 +30,51 @@ namespace TimberPlantController
             showChart();
         }
 
-        private SensorDataModel _sensorDataModel = ThirdEyeApplicationContext.GetCurrentSensorDataModel(); 
+        private SensorDataModel _sensorDataModel = ThirdEyeApplicationContext.GetCurrentSensorDataModel();
 
+        //Reference :
+        // http://msdn.microsoft.com/en-us/magazine/ff714591.aspx
+        //Dynamic Data Display : http://dynamicdatadisplay.codeplex.com/documentation
         private void showChart()
         {
-            this.lineChart.DataContext = _sensorDataModel;
+            var sensorCollection = _sensorDataModel.SensorCollection;
 
+            DateTime[] dates = new DateTime[sensorCollection.Count];
+            float[] sensor1 = new float[sensorCollection.Count];
+            float[] sensor2 = new float[sensorCollection.Count];
+            float[] sensor3 = new float[sensorCollection.Count];
 
-            List<KeyValuePair<string, int >> valueList = new List<KeyValuePair<string, int>>();
-            foreach (var sensorModel in _sensorDataModel.SensorCollection)
+            for (int i = 0; i < sensorCollection.Count; ++i)
             {
-                valueList.Add(new KeyValuePair<string, int>(sensorModel.Sensor1, int.Parse(sensorModel.Sensor2)));
-
+                dates[i] = sensorCollection[i].DateTime;
+                sensor1[i] = float.Parse(sensorCollection[i].Sensor1);
+                sensor2[i] = float.Parse(sensorCollection[i].Sensor2);
+                sensor3[i] = float.Parse(sensorCollection[i].Sensor3);
             }
-            //valueList.Add(new KeyValuePair<string, int>("Developer", 60));
-            //valueList.Add(new KeyValuePair<string, int>("Misc", 20));
-            //valueList.Add(new KeyValuePair<string, int>("Tester", 50));
-            //valueList.Add(new KeyValuePair<string, int>("QA", 30));
-            //valueList.Add(new KeyValuePair<string, int>("Project Manager", 40));
 
-            ////<Charting:LineSeries  DependentValuePath="Value" IndependentValuePath="Key" ItemsSource="{Binding}" IsSelectionEnabled="True"/>
-            ////<Charting:LineSeries  DependentValuePath="Sensor1" IndependentValuePath="Sensor2" ItemsSource="{Binding SensorCollection}" IsSelectionEnabled="True"/>
-            this.lineChart.DataContext = valueList;
+            var datesDataSource = new EnumerableDataSource<DateTime>(dates);
+            datesDataSource.SetXMapping(x => dateAxis.ConvertToDouble(x));
+
+            create(sensor1, "sensor 1", Brushes.Red, datesDataSource);
+            create(sensor2, "sensor 2", Brushes.Green, datesDataSource);
+            create(sensor3, "sensor 3", Brushes.Blue, datesDataSource);
+
+            plotter.Viewport.FitToView();
+        }
+
+        private void create(float[] sensor, string sensorName, Brush brush, EnumerableDataSource<DateTime> datesDataSource)
+        {
+            var numbersensordatasource = new EnumerableDataSource<float>(sensor);
+            numbersensordatasource.SetYMapping(y => y);
+
+            var compositeSensor1DataSource = new
+            CompositeDataSource(datesDataSource, numbersensordatasource);
+
+            plotter.AddLineGraph(compositeSensor1DataSource,
+              new Pen(brush, 2),
+              new CirclePointMarker { Size = 10.0, Fill = brush },
+              new PenDescription(sensorName));
+
         }
     }
 }

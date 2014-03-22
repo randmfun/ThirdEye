@@ -6,9 +6,12 @@
              mc:Ignorable="d" 
              >
     <Grid>
-        <DataGrid AlternatingRowBackground="#FFC4B0B0" AutoGenerateColumns="False" Name="grdSensor" ItemsSource="{Binding SensorCollection}">
+        <DataGrid AlternatingRowBackground="#FFC4B0B0" 
+                  AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto"
+                  Name="grdSensor" 
+                  ItemsSource="{Binding SensorCollection}" Height="350" Width="Auto">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding DateTime}" Width="100" Header="Date Time"/>
+                <DataGridTextColumn Binding="{Binding DateTime}" Width="*" Header="Date Time"/>
                 <DataGridTextColumn Binding="{Binding Sensor1}" Width="100" Header="Sensor1"/>
                 <DataGridTextColumn Binding="{Binding Sensor2}" Width="100" Header="Sensor2"/>
                 <DataGridTextColumn Binding="{Binding Sensor3}" Width="100" Header="Sensor3"/>

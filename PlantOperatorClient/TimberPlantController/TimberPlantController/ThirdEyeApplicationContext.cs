@@ -22,6 +22,11 @@ namespace TimberPlantController
             currentSensorDataModel = sensorDataModel;
         }
 
+        public static void UpdateCurrentSensorModel(SensorModel sensorModel)
+        {
+            currentSensorDataModel.SensorCollection.Add(sensorModel);
+        }
+
         public static CommunicationConfigViewModel GetCommunicationConfigViewModel()
         {
             return communicationConfigViewModel ?? new CommunicationConfigViewModel();

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -12,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using Randmfun.DataModel;
+using Randmfun.ScanLib;
 
 namespace TimberPlantController
 {
@@ -69,6 +73,8 @@ namespace TimberPlantController
 
                 var sensorDataModel = Randmfun.Archiver.Serializer.DeSerializeData(fileName);
                 ThirdEyeApplicationContext.SetCurrentSensorModel(sensorDataModel);
+                this.lblFilePath.Content = fileName;
+                this.lblDetailName.Content = sensorDataModel.DetailsName;
             }
         }
 
@@ -81,6 +87,54 @@ namespace TimberPlantController
         {
             this.Close();
         }
+
+        private void StartClick(object sender, RoutedEventArgs e)
+        {
+            var sensorDataModel = new SensorDataModel();
+
+            ThirdEyeApplicationContext.SetCurrentSensorModel(sensorDataModel);
+
+            ThirdEyeApplicationContext.UpdateCurrentSensorModel(new SensorModel() { Sensor1 = "123", Sensor2 = "234" });
+
+            //SerialPort serialPort = new SerialPort();
+
+            //ISerialIo serialIo = new SerialIoLayer(serialPort);
+            //serialIo.Start();
+            //serialIo.LogData += (serialIo_LogData);
+
+            //Scanner scanner = new Scanner(serialIo);
+            //scanner.Start();
+        }
+
+        private void LoadDummyDataClick(object sender, RoutedEventArgs e)
+        {
+            var _sensorDataModel = new SensorDataModel();
+            _sensorDataModel.SensorCollection = new ObservableCollection<SensorModel>();
+            for (int i = 1, j=10; i < 50; i++, j++)
+            {
+                int year = 1870 + i;
+                int month = i%10 + 1;
+                int day = i%28 + 1;
+                _sensorDataModel.SensorCollection.Add(new SensorModel()
+                                                          {
+                                                              DateTime = new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
+                                                              Sensor1 = i.ToString(), 
+                                                              Sensor2 = j.ToString(),
+                                                              Sensor3 = (j+10).ToString()
+                                                          });
+            }
+
+            ThirdEyeApplicationContext.SetCurrentSensorModel(_sensorDataModel);
+        }
         
+        private void CloseViewsClick(object sender, RoutedEventArgs e)
+        {
+            this.dockpanel.Children.Clear();
+        }
+
+        void serialIo_LogData(CommunicationState communicationState, SerialDataArgs evenArgs)
+        {
+            ThirdEyeApplicationContext.UpdateCurrentSensorModel(evenArgs.Sender);
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace Randmfun.ScanLib
 
         private readonly ScanDataParser _scanDataParser;
         private readonly SerialPort _serialPort;
+
         public SerialIoLayer(SerialPort serialPort)
         {
             this._serialPort = serialPort;
