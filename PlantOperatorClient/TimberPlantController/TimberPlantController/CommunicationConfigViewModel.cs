@@ -80,19 +80,21 @@ namespace TimberPlantController
             }
         }
 
+        #region Private Helpers
+        
         private List<RadioClass> getRadioStopBits()
         {
             List<RadioClass> list = new List<RadioClass>();
-            list.Add(new RadioClass { Header = "1", CheckedProperty = true });
-            list.Add(new RadioClass { Header = "1.5", CheckedProperty = false });
-            list.Add(new RadioClass { Header = "2", CheckedProperty = false });
+            list.Add(new RadioClass { Header = "One", CheckedProperty = true });
+            list.Add(new RadioClass { Header = "OnePointFive", CheckedProperty = false });
+            list.Add(new RadioClass { Header = "Two", CheckedProperty = false });
             return list;
         }
 
         private List<RadioClass> GetRadioPartiyBits()
         {
             List<RadioClass> list = new List<RadioClass>();
-            list.Add(new RadioClass { Header = "No", CheckedProperty = true });
+            list.Add(new RadioClass { Header = "None", CheckedProperty = true });
             list.Add(new RadioClass { Header = "Odd", CheckedProperty = false });
             list.Add(new RadioClass { Header = "Even", CheckedProperty = false });
             return list;
@@ -125,6 +127,8 @@ namespace TimberPlantController
             if (this.PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        #endregion
     }
 
     public class RadioClass : INotifyPropertyChanged

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO.Ports;
+using System.Threading;
 using Randmfun.DataModel;
 
 namespace Randmfun.ScanLib
@@ -20,6 +21,35 @@ namespace Randmfun.ScanLib
             this._scanDataParser = new ScanDataParser();
         }
 
+        static bool _continue;
+        int index = 0;
+        private void LoadDummyDataEvery2Secs()
+        {
+            while (_continue)
+            {
+                try
+                {
+                    index += 11;
+                    int sens2Val = index + 10;
+                    
+                    Thread.Sleep(2000);
+
+                    if (this.LogData != null)
+                    {
+                        this.LogData(ScanLib.CommunicationState.Reading,
+                                     new SerialDataArgs(new SensorModel()
+                                                            {
+                                                                DateTime = DateTime.Now,
+                                                                Sensor1 = index.ToString(),
+                                                                Sensor2 = sens2Val.ToString(),
+                                                                Sensor3 = sens2Val.ToString()
+                                                            }));
+                    }
+                }
+                catch (TimeoutException) { }
+            }
+        }
+
         public string Start()
         {
             this._serialPort.Open();
@@ -28,8 +58,12 @@ namespace Randmfun.ScanLib
             this._serialPort.DataReceived += (SerialPortDataReceived);
             this._scanDataParser.LogData += (_scanDataParser_ReadComplete);
 
-            this._serialPort.Write("y");
-
+            //TODO: Testing Code remove please
+            Thread readThread = new Thread(LoadDummyDataEvery2Secs);
+            readThread.Start();
+            _continue = true;
+            
+            //this._serialPort.Write("y"););
             return "";
         }
 
@@ -41,7 +75,7 @@ namespace Randmfun.ScanLib
                 this._serialPort.DataReceived -= (SerialPortDataReceived);
                 this._scanDataParser.LogData -= (_scanDataParser_ReadComplete);
             }
-
+            _continue = false;
             this.CommunicationState = CommunicationState.Closed;
         }
 

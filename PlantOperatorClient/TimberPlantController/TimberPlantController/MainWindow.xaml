@@ -1,7 +1,7 @@
 ﻿<Window x:Class="TimberPlantController.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-        Title="Third Eye" Height="450" Width="525">
+        Title="Third Eye" Height="450" Width="525" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="6*"/>
@@ -11,9 +11,12 @@
         <Menu IsMainMenu="True" Grid.Row="0">
 
             <MenuItem Header="_System" >
+                <MenuItem Header="Stop Reading.." Click="StopReadingClick"/>
+                <MenuItem Header="Start Reading.." Click="StartClick"/>
+                <Separator/>
                 <MenuItem Header="Generate Bar Code" Click="GenerateBarCode"/>
-                <MenuItem Header="Start.." Click="StartClick"/>
                 <MenuItem Header="LoadDummyData.." Click="LoadDummyDataClick"/>
+                <Separator/>
                 <MenuItem Header="ClearView.." Click="CloseViewsClick"/>
                 <Separator/>
                 <MenuItem Header="Print..."/>
@@ -28,6 +31,7 @@
             <MenuItem Header="_Views" >
                 <MenuItem Header="Graph.." Click="ClickGraphView"/>
                 <MenuItem Header="List.." Click="ClickListView"/>
+                <MenuItem Header="ClearView.." Click="CloseViewsClick"/>
             </MenuItem>
 
             <MenuItem Header="_Setup" >

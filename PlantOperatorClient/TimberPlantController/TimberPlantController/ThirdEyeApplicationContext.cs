@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using Randmfun.DataModel;
 
 namespace TimberPlantController
@@ -24,7 +25,8 @@ namespace TimberPlantController
 
         public static void UpdateCurrentSensorModel(SensorModel sensorModel)
         {
-            currentSensorDataModel.SensorCollection.Add(sensorModel);
+            Application.Current.Dispatcher.Invoke(
+                new Action(() => currentSensorDataModel.SensorCollection.Add(sensorModel)));
         }
 
         public static CommunicationConfigViewModel GetCommunicationConfigViewModel()

@@ -20,5 +20,6 @@
             <d3:VerticalAxisTitle FontFamily="Arial" Content="Temprature"/>
             <d3:HorizontalAxisTitle FontFamily="Arial" Content="Time"/>
         </d3:ChartPlotter>
+
     </DockPanel>
 </UserControl>

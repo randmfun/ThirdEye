@@ -88,22 +88,45 @@ namespace TimberPlantController
             this.Close();
         }
 
+        private ISerialIo currentGlobalSerialIO;
+        private SerialPort currentGlobalSerialPort;
+ 
         private void StartClick(object sender, RoutedEventArgs e)
         {
-            var sensorDataModel = new SensorDataModel();
+            try
+            {
+                var sensorDataModel = new SensorDataModel();
 
-            ThirdEyeApplicationContext.SetCurrentSensorModel(sensorDataModel);
+                ThirdEyeApplicationContext.SetCurrentSensorModel(sensorDataModel);
 
-            ThirdEyeApplicationContext.UpdateCurrentSensorModel(new SensorModel() { Sensor1 = "123", Sensor2 = "234" });
+                var comunicationModel = ThirdEyeApplicationContext.GetCommunicationConfigViewModel();
 
-            //SerialPort serialPort = new SerialPort();
+                this.currentGlobalSerialPort = new SerialPort();
 
-            //ISerialIo serialIo = new SerialIoLayer(serialPort);
-            //serialIo.Start();
-            //serialIo.LogData += (serialIo_LogData);
+                currentGlobalSerialPort.PortName = comunicationModel.SelectedComPort;
+                currentGlobalSerialPort.Parity = (Parity)Enum.Parse(typeof(Parity), comunicationModel.SelectedParity);
+                currentGlobalSerialPort.BaudRate = int.Parse(comunicationModel.SelectedBaudRate);
+                currentGlobalSerialPort.DataBits = int.Parse(comunicationModel.SelectedDataBit);
+                currentGlobalSerialPort.StopBits = (StopBits)Enum.Parse(typeof(StopBits), comunicationModel.SelectedStopBit);
 
-            //Scanner scanner = new Scanner(serialIo);
-            //scanner.Start();
+                this.currentGlobalSerialIO = new SerialIoLayer(currentGlobalSerialPort);
+                currentGlobalSerialIO.LogData += (serialIo_LogData);
+
+                currentGlobalSerialIO.Start();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message + exception.InnerException);
+            }
+        }
+
+        private void StopReadingClick(object sender, RoutedEventArgs e)
+        {
+            if(currentGlobalSerialIO != null)
+                currentGlobalSerialIO.Stop();
+
+            if(currentGlobalSerialPort != null)
+                currentGlobalSerialPort.Close();
         }
 
         private void LoadDummyDataClick(object sender, RoutedEventArgs e)
@@ -135,6 +158,11 @@ namespace TimberPlantController
         void serialIo_LogData(CommunicationState communicationState, SerialDataArgs evenArgs)
         {
             ThirdEyeApplicationContext.UpdateCurrentSensorModel(evenArgs.Sender);
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            StopReadingClick(null, null);
         }
     }
 }
