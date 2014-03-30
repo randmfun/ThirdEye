@@ -55,6 +55,63 @@ namespace Randmfun.DataModel
             }
         }
 
+        private string _sensor4 = "0.0";
+        [ProtoMember(5)]
+        public string Sensor4
+        {
+            get { return _sensor4; }
+            set
+            {
+                _sensor4 = value;
+                this.OnNotifyPropertyChanged("Sensor4");
+            }
+        }
+        private string _sensor5 = "0.0";
+        [ProtoMember(6)]
+        public string Sensor5
+        {
+            get { return _sensor5; }
+            set
+            {
+                _sensor5 = value;
+                this.OnNotifyPropertyChanged("Sensor5");
+            }
+        }
+        private string _sensor6 = "0.0";
+        [ProtoMember(7)]
+        public string Sensor6
+        {
+            get { return _sensor6; }
+            set
+            {
+                _sensor6 = value;
+                this.OnNotifyPropertyChanged("Sensor6");
+            }
+        }
+        private string _sensor7 = "0.0";
+        [ProtoMember(8)]
+        public string Sensor7
+        {
+            get { return _sensor7; }
+            set
+            {
+                _sensor7 = value;
+                this.OnNotifyPropertyChanged("Sensor7");
+            }
+        }
+
+        private string _sensor8 = "0.0";
+        [ProtoMember(9)]
+        public string Sensor8
+        {
+            get { return _sensor8; }
+            set
+            {
+                _sensor8 = value;
+                this.OnNotifyPropertyChanged("Sensor8");
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnNotifyPropertyChanged(string propertyName)

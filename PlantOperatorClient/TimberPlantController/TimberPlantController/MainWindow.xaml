@@ -11,19 +11,17 @@
         <Menu IsMainMenu="True" Grid.Row="0">
 
             <MenuItem Header="_System" >
-                <MenuItem Header="Stop Reading.." Click="StopReadingClick"/>
                 <MenuItem Header="Start Reading.." Click="StartClick"/>
+                <MenuItem Header="Stop Reading.." Click="StopReadingClick"/>
                 <Separator/>
                 <MenuItem Header="Generate Bar Code" Click="GenerateBarCode"/>
                 <MenuItem Header="LoadDummyData.." Click="LoadDummyDataClick"/>
                 <Separator/>
-                <MenuItem Header="ClearView.." Click="CloseViewsClick"/>
-                <Separator/>
-                <MenuItem Header="Print..."/>
-                <MenuItem Header="Print Preview"/>
-                <MenuItem Header="Print Setup..."/>
+                <MenuItem Header="Print..." Click="PrintClick"/>
+                <MenuItem Header="Print Preview" Click="PrintPreviewClick"/>
+                <MenuItem Header="Print Setup..." IsEnabled="False"/>
                 <Separator />
-                <MenuItem Header="Change Password..."/>
+                <MenuItem Header="Change Password..." IsEnabled="False"/>
                 <Separator />
                 <MenuItem Header="Exit" Click="ExitClick"/>
             </MenuItem>
@@ -40,9 +38,9 @@
 
             <MenuItem Header="_Archive" >
                 <MenuItem Header="Open..." Click="OpenArchiveClick"/>
-                <MenuItem Header="Close" />
                 <MenuItem Header="Save..." Click="ClickSaveArchive"/>
-                <MenuItem Header="Export To Excel..."/>
+                <MenuItem Header="Export To Excel..." IsEnabled="False"/>
+                <MenuItem Header="Close" IsEnabled="False"/>
             </MenuItem>
 
             <MenuItem Header="_Help" />
@@ -55,12 +53,12 @@
         <Border BorderThickness="1" BorderBrush="Gray" Grid.Row="2">
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Archive File: "/>
-                    <Label Name="lblFilePath"  Content=""/>
+                    <Label Name="lblArchive" Content="Archive File: " Visibility="Collapsed"/>
+                    <Label Name="lblFilePath"  Content="" Visibility="Collapsed"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Detail Name : "/>
-                    <Label Name="lblDetailName"  Content=""/>
+                    <Label Name="lblDetail" Content="Detail Name : " Visibility="Collapsed"/>
+                    <Label Name="lblDetailName"  Content="" Visibility="Collapsed"/>
                 </StackPanel>
             </StackPanel>
         </Border>

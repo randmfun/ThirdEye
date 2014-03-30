@@ -16,7 +16,7 @@
                 <Axes:VerticalIntegerAxis Name="countAxis"/>
             </d3:ChartPlotter.VerticalAxis>
 
-            <d3:Header FontFamily="Arial" Content="Senor Information"/>
+            <d3:Header FontFamily="Arial" Content="Sensor Information"/>
             <d3:VerticalAxisTitle FontFamily="Arial" Content="Temprature"/>
             <d3:HorizontalAxisTitle FontFamily="Arial" Content="Time"/>
         </d3:ChartPlotter>

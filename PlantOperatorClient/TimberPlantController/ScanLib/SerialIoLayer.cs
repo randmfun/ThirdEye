@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO.Ports;
+using System.Text;
 using System.Threading;
 using Randmfun.DataModel;
 
@@ -22,31 +24,21 @@ namespace Randmfun.ScanLib
         }
 
         static bool _continue;
-        int index = 0;
         private void LoadDummyDataEvery2Secs()
         {
             while (_continue)
             {
                 try
                 {
-                    index += 11;
-                    int sens2Val = index + 10;
-                    
-                    Thread.Sleep(2000);
+                    Thread.Sleep(3000);
 
-                    if (this.LogData != null)
-                    {
-                        this.LogData(ScanLib.CommunicationState.Reading,
-                                     new SerialDataArgs(new SensorModel()
-                                                            {
-                                                                DateTime = DateTime.Now,
-                                                                Sensor1 = index.ToString(),
-                                                                Sensor2 = sens2Val.ToString(),
-                                                                Sensor3 = sens2Val.ToString()
-                                                            }));
-                    }
+                    if (_serialPort.IsOpen)
+                        this._serialPort.Write("y");
                 }
-                catch (TimeoutException) { }
+                catch (Exception exception)
+                {
+                    var msg = exception.Message;
+                }
             }
         }
 
@@ -58,12 +50,11 @@ namespace Randmfun.ScanLib
             this._serialPort.DataReceived += (SerialPortDataReceived);
             this._scanDataParser.LogData += (_scanDataParser_ReadComplete);
 
-            //TODO: Testing Code remove please
-            Thread readThread = new Thread(LoadDummyDataEvery2Secs);
+            var readThread = new Thread(LoadDummyDataEvery2Secs);
             readThread.Start();
+
             _continue = true;
             
-            //this._serialPort.Write("y"););
             return "";
         }
 
@@ -87,13 +78,16 @@ namespace Randmfun.ScanLib
 
         void SerialPortDataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            if (_serialPort.IsOpen)
+            try
             {
-                var line = _serialPort.ReadExisting();
-                this._scanDataParser.Parse(_serialPort.ReadExisting(), this.CommunicationState);
+                if (_serialPort.IsOpen)
+                {
+                    var line = _serialPort.ReadLine();
+                    this._scanDataParser.Parse(line, ScanLib.CommunicationState.Reading);
+                }
             }
+            catch (Exception ex){}
         }
-
     }
 
     public interface ISerialIo
@@ -110,7 +104,8 @@ namespace Randmfun.ScanLib
         None,
         Open,
         Reading,
-        Closed
+        Closed,
+        OpenArchive
     }
 
     public delegate void SerialDataEventHandler(CommunicationState communicationState, SerialDataArgs evenArgs);

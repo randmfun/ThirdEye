@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
+using System.Drawing.Printing;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -8,14 +10,18 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Microsoft.Win32;
 using Randmfun.DataModel;
 using Randmfun.ScanLib;
+using TimberPlantController.Common;
+using MessageBox = System.Windows.MessageBox;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
+using PrintDialog = System.Windows.Forms.PrintDialog;
 
 namespace TimberPlantController
 {
@@ -24,6 +30,8 @@ namespace TimberPlantController
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static CommunicationState currentCommunicationState = CommunicationState.None;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -73,6 +81,12 @@ namespace TimberPlantController
 
                 var sensorDataModel = Randmfun.Archiver.Serializer.DeSerializeData(fileName);
                 ThirdEyeApplicationContext.SetCurrentSensorModel(sensorDataModel);
+
+                this.lblArchive.Visibility = System.Windows.Visibility.Visible;
+                this.lblDetail.Visibility = System.Windows.Visibility.Visible;
+                this.lblDetailName.Visibility = System.Windows.Visibility.Visible;
+                this.lblFilePath.Visibility = System.Windows.Visibility.Visible;
+
                 this.lblFilePath.Content = fileName;
                 this.lblDetailName.Content = sensorDataModel.DetailsName;
             }
@@ -113,6 +127,14 @@ namespace TimberPlantController
                 currentGlobalSerialIO.LogData += (serialIo_LogData);
 
                 currentGlobalSerialIO.Start();
+
+                this.lblArchive.Visibility = System.Windows.Visibility.Collapsed;
+                this.lblDetail.Visibility = System.Windows.Visibility.Collapsed;
+                this.lblDetailName.Visibility = System.Windows.Visibility.Collapsed;
+                this.lblFilePath.Visibility = System.Windows.Visibility.Visible;
+                this.lblFilePath.Content = string.Format("Reading from {0}, at {1} baudrate", currentGlobalSerialPort.PortName, currentGlobalSerialPort.BaudRate.ToString());
+
+                currentCommunicationState = CommunicationState.Reading;
             }
             catch (Exception exception)
             {
@@ -127,13 +149,28 @@ namespace TimberPlantController
 
             if(currentGlobalSerialPort != null)
                 currentGlobalSerialPort.Close();
+
+            this.lblArchive.Visibility = System.Windows.Visibility.Collapsed;
+            this.lblDetail.Visibility = System.Windows.Visibility.Collapsed;
+            this.lblDetailName.Visibility = System.Windows.Visibility.Collapsed;
+            this.lblFilePath.Visibility = System.Windows.Visibility.Collapsed;
+
+            if (currentGlobalSerialPort != null)
+            {
+                this.lblFilePath.Content = string.Format("Stopped Reading from {0}, at {1} baudrate",
+                                                         currentGlobalSerialPort.PortName,
+                                                         currentGlobalSerialPort.BaudRate.ToString());
+                this.lblFilePath.Visibility = System.Windows.Visibility.Visible;
+            }
+
+            currentCommunicationState = CommunicationState.Closed;
         }
 
         private void LoadDummyDataClick(object sender, RoutedEventArgs e)
         {
             var _sensorDataModel = new SensorDataModel();
             _sensorDataModel.SensorCollection = new ObservableCollection<SensorModel>();
-            for (int i = 1, j=10; i < 50; i++, j++)
+            for (int i = 1, j=10, k=20; i < 50; i++, j++, k++)
             {
                 int year = 1870 + i;
                 int month = i%10 + 1;
@@ -143,7 +180,7 @@ namespace TimberPlantController
                                                               DateTime = new DateTime(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
                                                               Sensor1 = i.ToString(), 
                                                               Sensor2 = j.ToString(),
-                                                              Sensor3 = (j+10).ToString()
+                                                              Sensor3 = k.ToString()
                                                           });
             }
 
@@ -163,6 +200,17 @@ namespace TimberPlantController
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             StopReadingClick(null, null);
+        }
+
+        public void PrintClick(object sender, RoutedEventArgs e)
+        {
+            new PrintSenorDetails().Print(); 
+
+        }
+
+        public void PrintPreviewClick(object sender, RoutedEventArgs e)
+        {
+            new PrintSenorDetails().PrintPreview();
         }
     }
 }

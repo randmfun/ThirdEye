@@ -1,4 +1,5 @@
-﻿using Randmfun.DataModel;
+﻿using System.Collections.Generic;
+using Randmfun.DataModel;
 
 namespace Randmfun.ScanLib
 {
@@ -12,41 +13,40 @@ namespace Randmfun.ScanLib
             {
                 if (inputBuffer.Contains("Y"))
                 {
-                    readerIndex = 0;
-                    currentModel = new SensorModel();
                     NotifyLogData(communicationState, null);
                 }
             }
             else if (communicationState == CommunicationState.Reading)
             {
-                var charAry = inputBuffer.Split('\r');
+                var charAry = inputBuffer.Split(' ');
 
-                foreach (var value in charAry)
+                List<string > lst = new List<string>();
+                foreach (var s in charAry)
                 {
-                    AddToReading(value);
+                    if(!string.IsNullOrWhiteSpace(s))
+                        lst.Add(s);
                 }
+
+                AddToReading(lst);
             }
         }
 
-        private int readerIndex = 0;
-        private SensorModel currentModel;
-
-        private void AddToReading(string value)
+        private void AddToReading(List<string> value)
         {
-            readerIndex = readerIndex%8;
+            if(value.Count < 8 )
+                return;
 
-            if (readerIndex == 0)
-            {
-                currentModel = new SensorModel();
-                currentModel.Sensor1 = value;
-            }
-            else if (readerIndex == 7)
-            {
-                currentModel.Sensor1 = value;
-                NotifyLogData(CommunicationState.Reading, new SerialDataArgs(currentModel));
-            }
+            var currentModel = new SensorModel();
+            currentModel.Sensor1 = value[0];
+            currentModel.Sensor2 = value[1];
+            currentModel.Sensor3 = value[2];
+            currentModel.Sensor4 = value[3];
+            currentModel.Sensor5 = value[4];
+            currentModel.Sensor6 = value[5];
+            currentModel.Sensor7 = value[6];
+            currentModel.Sensor8 = value[7];
 
-            readerIndex++;
+            NotifyLogData(CommunicationState.Reading, new SerialDataArgs(currentModel));
         }
 
         private void NotifyLogData(CommunicationState communicationState, SerialDataArgs serialDataArgs)

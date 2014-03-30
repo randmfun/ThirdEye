@@ -22,10 +22,14 @@ namespace TimberPlantController
     /// </summary>
     public partial class BatchList : UserControl, INotifyPropertyChanged
     {
+        public static DataGrid CurrentDataGrid { get; set; }
+
         public BatchList()
         {
             InitializeComponent();
             this.DataContext = SensorDataModel;
+
+            CurrentDataGrid = this.grdSensor;
         }
 
         private SensorDataModel _sensorDataModel; 
