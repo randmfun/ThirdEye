@@ -1,0 +1,73 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Account/f:ChangePasswordSuccess.aspx.cs" caret="0" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Account/f:Register.aspx.cs" caret="0" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Global.asax.cs" caret="0" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Site.Master.cs" caret="326" fromTop="13" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Account/f:Login.aspx.cs" caret="464" fromTop="16" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Account/f:Login.aspx.designer.cs" caret="1082" fromTop="24" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Web.config" caret="1956" fromTop="23" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Account/f:Register.aspx" caret="5147" fromTop="21" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Account/f:Login.aspx" caret="1102" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Account/f:ChangePassword.aspx.cs" caret="344" fromTop="16" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Account/f:ChangePassword.aspx" caret="582" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Default.aspx" caret="0" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Account/f:Web.config" caret="0" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:About.aspx" caret="439" fromTop="12" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Site.Master" caret="2273" fromTop="7" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:About.aspx.cs" caret="0" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="722" fromTop="16" />
+      <File id="D3A93771-6A17-41D7-B5C6-FBC8A7B46F43/f:Code128Rendering.cs" caret="7188" fromTop="17" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="922" fromTop="19" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Default.aspx" caret="0" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="164" fromTop="0" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Site.Master" caret="1820" fromTop="13" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="562" fromTop="11" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="762" fromTop="16" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="707" fromTop="16" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="405" fromTop="12" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="979" fromTop="19" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="691" fromTop="14" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Image">
+      <Item value="ControlStyle" priority="0" />
+      <Item value="ImageUrl" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Default">
+      <Item value="imgBarCode" priority="0" />
+      <Item value="GetImage`0" priority="0" />
+      <Item value="text" priority="0" />
+      <Item value="myimg" priority="0" />
+      <Item value="ms" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.MemoryStream">
+      <Item value="GetBuffer`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToBase64String`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
