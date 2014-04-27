@@ -113,6 +113,7 @@
     <Compile Include="BarCode.aspx.designer.cs">
       <DependentUpon>BarCode.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Barcode\BarcodeManager.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,9 +141,17 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\PlantOperatorClient\TimberPlantController\Archiver\Archiver.csproj">
+      <Project>{DA75A52A-3D24-457C-9360-45ABFB7F8EE3}</Project>
+      <Name>Archiver</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\PlantOperatorClient\TimberPlantController\BarCodeGenerator\BarCodeGenerator.csproj">
       <Project>{D3A93771-6A17-41D7-B5C6-FBC8A7B46F43}</Project>
       <Name>BarCodeGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PlantOperatorClient\TimberPlantController\DataModel\DataModel.csproj">
+      <Project>{BA56DC3A-2789-4339-BE1D-B00C030B8289}</Project>
+      <Name>DataModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

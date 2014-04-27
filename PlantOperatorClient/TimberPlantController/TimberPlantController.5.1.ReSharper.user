@@ -1,0 +1,613 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="System" priority="5" />
+      <Item value="Drawing`0" priority="0" />
+      <Item value="this" priority="34" />
+      <Item value="new" priority="38" />
+      <Item value="txtName" priority="0" />
+      <Item value="Drawing" priority="3" />
+      <Item value="myimg" priority="1" />
+      <Item value="bImg" priority="1" />
+      <Item value="var" priority="17" />
+      <Item value="Code128Code`0" priority="0" />
+      <Item value="Code128Rendering`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="void" priority="15" />
+      <Item value="valueList" priority="0" />
+      <Item value="public" priority="22" />
+      <Item value="IObservable" priority="1" />
+      <Item value="ObservableCollection" priority="0" />
+      <Item value="DateTime`0" priority="4" />
+      <Item value="private" priority="16" />
+      <Item value="return" priority="10" />
+      <Item value="_dateTime" priority="1" />
+      <Item value="value" priority="8" />
+      <Item value="sbyte" priority="0" />
+      <Item value="string" priority="28" />
+      <Item value="if" priority="6" />
+      <Item value="PropertyChangedEventArgs" priority="0" />
+      <Item value="propertyName" priority="0" />
+      <Item value="_sensor1" priority="1" />
+      <Item value="ObservableCollection&lt;SensorModel&gt;" priority="2" />
+      <Item value="_sensorCollection" priority="2" />
+      <Item value="INotifyPropertyChanged`0" priority="2" />
+      <Item value="Binding`0" priority="0" />
+      <Item value="BatchList`0" priority="1" />
+      <Item value="SensorDataModel" priority="3" />
+      <Item value="PopulateTemp`0" priority="0" />
+      <Item value="password" priority="3" />
+      <Item value="algorithm" priority="1" />
+      <Item value="static" priority="14" />
+      <Item value="memoryStream" priority="5" />
+      <Item value="length" priority="0" />
+      <Item value="GetAlgorithm`0" priority="0" />
+      <Item value="InsufficientMemoryException`0" priority="0" />
+      <Item value="MemoryStream" priority="0" />
+      <Item value="ms" priority="1" />
+      <Item value="data" priority="1" />
+      <Item value="cryptographer" priority="0" />
+      <Item value="Path`0" priority="3" />
+      <Item value="outputFile" priority="9" />
+      <Item value="File`0" priority="5" />
+      <Item value="attributes" priority="0" />
+      <Item value="FileAttributes`0" priority="0" />
+      <Item value="FileInfo`0" priority="1" />
+      <Item value="fileInfo" priority="4" />
+      <Item value="FileInfo" priority="0" />
+      <Item value="const" priority="0" />
+      <Item value="FileStream`0" priority="0" />
+      <Item value="FileStream" priority="0" />
+      <Item value="Open" priority="0" />
+      <Item value="fs" priority="0" />
+      <Item value="StreamReader`0" priority="1" />
+      <Item value="streamReader" priority="3" />
+      <Item value="StreamReader" priority="0" />
+      <Item value="true" priority="2" />
+      <Item value="Assert`0" priority="1" />
+      <Item value="read" priority="0" />
+      <Item value="content" priority="2" />
+      <Item value="TestMethod" priority="0" />
+      <Item value="Cryptographer`0" priority="3" />
+      <Item value="try" priority="2" />
+      <Item value="filePath" priority="2" />
+      <Item value="Byte`0" priority="0" />
+      <Item value="actualData" priority="1" />
+      <Item value="CollectionAssert`0" priority="1" />
+      <Item value="inFile" priority="0" />
+      <Item value="outputFilePath" priority="1" />
+      <Item value="Default" priority="0" />
+      <Item value="ProtoBuf" priority="1" />
+      <Item value="sensorDataModel" priority="19" />
+      <Item value="SearchOption`0" priority="0" />
+      <Item value="SensorDataModel`0" priority="5" />
+      <Item value="SensorModel`0" priority="2" />
+      <Item value="_sensorModels" priority="1" />
+      <Item value="_startDateTime" priority="0" />
+      <Item value="TextBox`0" priority="0" />
+      <Item value="SaveArchive`0" priority="0" />
+      <Item value="_filePath" priority="3" />
+      <Item value="_fileName" priority="1" />
+      <Item value="Application`0" priority="1" />
+      <Item value="Environment`0" priority="0" />
+      <Item value="SaveArchiveViewModel`0" priority="0" />
+      <Item value="saveArchiveViewModel" priority="1" />
+      <Item value="SaveArchiveViewModel" priority="0" />
+      <Item value="Randmfun" priority="1" />
+      <Item value="Archiver" priority="1" />
+      <Item value="fileFullPath" priority="1" />
+      <Item value="SensorModel" priority="4" />
+      <Item value="DeleteFile`0" priority="0" />
+      <Item value="Serializer`0" priority="0" />
+      <Item value="sensorDataModelActual" priority="4" />
+      <Item value="CenterOwner" priority="0" />
+      <Item value="object" priority="2" />
+      <Item value="RoutedEventArgs`0" priority="2" />
+      <Item value="openFileDialog" priority="3" />
+      <Item value="OpenFileDialog" priority="0" />
+      <Item value="currentSensorDataModel" priority="3" />
+      <Item value="_sensorDataModel" priority="4" />
+      <Item value="ApplicationContext`0" priority="1" />
+      <Item value="ThirdEyeApplicationContext`0" priority="7" />
+      <Item value="foreach" priority="2" />
+      <Item value="int" priority="8" />
+      <Item value="i" priority="5" />
+      <Item value="j" priority="3" />
+      <Item value="Sensor1" priority="2" />
+      <Item value="Sensor2" priority="2" />
+      <Item value="sensorModel" priority="5" />
+      <Item value="DockPanel`0" priority="0" />
+      <Item value="MessageBox`0" priority="1" />
+      <Item value="catch" priority="1" />
+      <Item value="Exception`0" priority="2" />
+      <Item value="exception" priority="7" />
+      <Item value="CommunicationConfigViewModel`0" priority="1" />
+      <Item value="communicationConfigViewModel" priority="3" />
+      <Item value="CommunicationConfigViewModel" priority="0" />
+      <Item value="configViewModel" priority="0" />
+      <Item value="fileName" priority="0" />
+      <Item value="scanner" priority="2" />
+      <Item value="Scanner" priority="0" />
+      <Item value="ISerialIo`0" priority="0" />
+      <Item value="serialIo" priority="5" />
+      <Item value="serialPort" priority="6" />
+      <Item value="SerialPort" priority="0" />
+      <Item value="evenArgs" priority="1" />
+      <Item value="float" priority="10" />
+      <Item value="DateTime" priority="2" />
+      <Item value="DataChangedEventManager`0" priority="0" />
+      <Item value="Brush`0" priority="1" />
+      <Item value="brush" priority="1" />
+      <Item value="create`0" priority="0" />
+      <Item value="sensor1" priority="0" />
+      <Item value="datesDataSource" priority="0" />
+      <Item value="Sensor3" priority="1" />
+      <Item value="comunicationModel" priority="4" />
+      <Item value="Enum`0" priority="1" />
+      <Item value="Parity`0" priority="1" />
+      <Item value="typeof" priority="0" />
+      <Item value="StopBits`0" priority="1" />
+      <Item value="readThread" priority="0" />
+      <Item value="Thread`0" priority="0" />
+      <Item value="CommunicationState`0" priority="3" />
+      <Item value="SerialDataArgs" priority="0" />
+      <Item value="index" priority="2" />
+      <Item value="sens2Val" priority="1" />
+      <Item value="_continue" priority="1" />
+      <Item value="null" priority="3" />
+      <Item value="sender" priority="0" />
+      <Item value="false" priority="2" />
+      <Item value="currentGlobalSerialPortObject" priority="1" />
+      <Item value="StringBuilder" priority="0" />
+      <Item value="line" priority="3" />
+      <Item value="_serialPort" priority="0" />
+      <Item value="List" priority="0" />
+      <Item value="currentModel" priority="1" />
+      <Item value="AddToReading`0" priority="0" />
+      <Item value="charAry" priority="0" />
+      <Item value="Length" priority="0" />
+      <Item value="Visible" priority="0" />
+      <Item value="retVal" priority="2" />
+      <Item value="str" priority="0" />
+      <Item value="out" priority="0" />
+      <Item value="k" priority="0" />
+      <Item value="currentGlobalSerialPort" priority="2" />
+      <Item value="Visibility`0" priority="3" />
+      <Item value="VisibilityProperty" priority="0" />
+      <Item value="currentCommunicationState" priority="2" />
+      <Item value="None" priority="0" />
+      <Item value="Closed" priority="0" />
+      <Item value="Windows" priority="3" />
+      <Item value="Forms" priority="2" />
+      <Item value="PrintDialog" priority="0" />
+      <Item value="PrintAction`0" priority="0" />
+      <Item value="StringFormat`0" priority="0" />
+      <Item value="DataGridView`0" priority="1" />
+      <Item value="Controls" priority="0" />
+      <Item value="FontFamily`0" priority="4" />
+      <Item value="Rectangle`0" priority="0" />
+      <Item value="Font`0" priority="2" />
+      <Item value="Color`0" priority="0" />
+      <Item value="GetDataGridRows`0" priority="1" />
+      <Item value="dataGridView1" priority="3" />
+      <Item value="GridRow" priority="3" />
+      <Item value="cellContent" priority="1" />
+      <Item value="Font" priority="2" />
+      <Item value="pdoc" priority="0" />
+      <Item value="DataGrid`0" priority="0" />
+      <Item value="CurrentDataGrid" priority="0" />
+      <Item value="GridCol" priority="0" />
+      <Item value="gridRows" priority="1" />
+      <Item value="iRow" priority="1" />
+      <Item value="IList`0" priority="0" />
+      <Item value="List&lt;DataGridRow&gt;" priority="0" />
+      <Item value="retList" priority="2" />
+      <Item value="lstGridRows" priority="0" />
+      <Item value="PrintSenorDetails`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TimberPlantController.MainWindow">
+      <Item value="dockpanel" priority="4" />
+      <Item value="Close`0" priority="0" />
+      <Item value="lblFilePath" priority="1" />
+      <Item value="lblDetailName" priority="0" />
+      <Item value="lblArchive" priority="0" />
+      <Item value="lblDetail" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DockPanel">
+      <Item value="Children" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.UIElementCollection">
+      <Item value="Add`0" priority="1" />
+      <Item value="Clear`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBox">
+      <Item value="Name" priority="0" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TimberPlantController.BarCodeDemoCtrl">
+      <Item value="imgBarCode" priority="0" />
+      <Item value="txtInput" priority="0" />
+      <Item value="txtGenBarCode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Image">
+      <Item value="Source" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBlock">
+      <Item value="Text" priority="1" />
+      <Item value="FontStyle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="4" />
+      <Item value="Format`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TimberPlantController.GraphControl">
+      <Item value="lineChart" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DataVisualization.Charting.Chart">
+      <Item value="DataContext" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DataGrid">
+      <Item value="Columns" priority="1" />
+      <Item value="AlternatingRowBackground" priority="0" />
+      <Item value="AutoGenerateColumns" priority="0" />
+      <Item value="Items" priority="1" />
+      <Item value="FontFamily" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataModel.SensorModel">
+      <Item value="PropertyChanged" priority="1" />
+      <Item value="OnNotifyPropertyChanged`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TimberPlantController.BatchList">
+      <Item value="DataContext" priority="0" />
+      <Item value="SensorCollection" priority="0" />
+      <Item value="grdSensor" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.ObservableCollection`1">
+      <Item value="Add`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.MemoryStream">
+      <Item value="Length" priority="4" />
+      <Item value="Read`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Archiver.Cryptographer">
+      <Item value="WriteEnCryptedMemoryStream`0" priority="0" />
+      <Item value="GetDeCryptedMemoryStream`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="GetTempPath`0" priority="0" />
+      <Item value="Combine`0" priority="1" />
+      <Item value="GetTempFileName`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="Exists`0" priority="1" />
+      <Item value="GetAttributes`0" priority="0" />
+      <Item value="Delete`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileInfo">
+      <Item value="Exists" priority="0" />
+      <Item value="Length" priority="1" />
+      <Item value="OpenRead`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="IsTrue`0" priority="0" />
+      <Item value="AreEqual`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamReader">
+      <Item value="ReadToEnd`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert">
+      <Item value="AreEqual`0" priority="1" />
+      <Item value="IsSubsetOf`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileStream">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Randmfun.DataModel.SensorDataModel">
+      <Item value="OnNotifyPropertyChanged`0" priority="0" />
+      <Item value="DetailsDesc" priority="3" />
+      <Item value="DetailsName" priority="4" />
+      <Item value="SensorCollection" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Randmfun.DataModel.SensorModel">
+      <Item value="Sensor1" priority="5" />
+      <Item value="DateTime" priority="3" />
+      <Item value="Sensor2" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TimberPlantController.CommunicationSetup">
+      <Item value="SetBinding`0" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+      <Item value="communicationConfigViewModel" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TimberPlantController.SaveArchive">
+      <Item value="ShowDialog`0" priority="0" />
+      <Item value="Close`0" priority="1" />
+      <Item value="saveArchiveViewModel" priority="4" />
+      <Item value="DataContext" priority="0" />
+      <Item value="Owner" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TimberPlantController.SaveArchiveViewModel">
+      <Item value="OnNotifyPropertyChanged`0" priority="1" />
+      <Item value="DetailsDesc" priority="0" />
+      <Item value="DetailsName" priority="0" />
+      <Item value="FilePath" priority="0" />
+      <Item value="FileName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Application">
+      <Item value="Current" priority="2" />
+      <Item value="ResourceAssembly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="SpecialFolder`0" priority="0" />
+      <Item value="GetFolderPath`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment+SpecialFolder">
+      <Item value="MyDocuments" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Randmfun.Archiver.Serializer">
+      <Item value="SerializeData`0" priority="1" />
+      <Item value="DeSerializeData`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Grid">
+      <Item value="SetRow`0" priority="0" />
+      <Item value="RowDefinitions" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Application">
+      <Item value="MainWindow" priority="0" />
+      <Item value="Dispatcher" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Win32.OpenFileDialog">
+      <Item value="ShowDialog`0" priority="0" />
+      <Item value="FileName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TimberPlantController.ApplicationContext">
+      <Item value="SetCurrentSensorModel`0" priority="0" />
+      <Item value="GetCurrentSensorDataModel`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TimberPlantController.ThirdEyeApplicationContext">
+      <Item value="SetCurrentSensorModel`0" priority="2" />
+      <Item value="GetCurrentSensorDataModel`0" priority="0" />
+      <Item value="GetCommunicationConfigViewModel`0" priority="2" />
+      <Item value="SetCommunicationConfigViewModel`0" priority="0" />
+      <Item value="UpdateCurrentSensorModel`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DataVisualization.Charting.LineSeries">
+      <Item value="DependentValueBinding" priority="0" />
+      <Item value="IndependentValueBinding" priority="0" />
+      <Item value="DependentValuePath" priority="0" />
+      <Item value="IndependentValuePath" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBox">
+      <Item value="Show`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="2" />
+      <Item value="InnerException" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Label">
+      <Item value="Content" priority="1" />
+      <Item value="IsVisible" priority="0" />
+      <Item value="Visibility" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Randmfun.ScanLib.ISerialIo">
+      <Item value="Start`0" priority="0" />
+      <Item value="LogData" priority="0" />
+      <Item value="Stop`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Randmfun.ScanLib.SerialDataArgs">
+      <Item value="Sender" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Randmfun.ScanLib.Scanner">
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.StackPanel">
+      <Item value="Children" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Single">
+      <Item value="TryParse`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.Brushes">
+      <Item value="Green" priority="0" />
+      <Item value="Blue" priority="0" />
+      <Item value="Gray" priority="0" />
+      <Item value="Gold" priority="0" />
+      <Item value="GreenYellow" priority="0" />
+      <Item value="Lavender" priority="0" />
+      <Item value="Brown" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.Ports.SerialPort">
+      <Item value="BaudRate" priority="1" />
+      <Item value="StopBits" priority="0" />
+      <Item value="PortName" priority="1" />
+      <Item value="Parity" priority="0" />
+      <Item value="DataBits" priority="0" />
+      <Item value="Close`0" priority="0" />
+      <Item value="ReadLine`0" priority="3" />
+      <Item value="ReadByte`0" priority="0" />
+      <Item value="IsOpen" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TimberPlantController.CommunicationConfigViewModel">
+      <Item value="SelectedBaudRate" priority="0" />
+      <Item value="SelectedStopBit" priority="0" />
+      <Item value="SelectedComPort" priority="0" />
+      <Item value="SelectedParity" priority="0" />
+      <Item value="SelectedDataBit" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Enum">
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Randmfun.ScanLib.CommunicationState">
+      <Item value="Reading" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Threading.Dispatcher">
+      <Item value="Invoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Window">
+      <Item value="ctx" priority="0" />
+      <Item value="Loaded" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.StringBuilder">
+      <Item value="AppendLine`0" priority="0" />
+      <Item value="Append`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Randmfun.ScanLib.SerialIoLayer">
+      <Item value="_serialPort" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="1" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Visibility">
+      <Item value="Hidden" priority="2" />
+      <Item value="Collapsed" priority="3" />
+      <Item value="Visible" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Printing.PrintDocument">
+      <Item value="PrintPage" priority="1" />
+      <Item value="BeginPrint" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TimberPlantController.Common.PrintSenorDetails">
+      <Item value="print`0" priority="1" />
+      <Item value="PrintPreview`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.MenuItem">
+      <Item value="Click" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGrid">
+      <Item value="HeaderBackColor" priority="0" />
+      <Item value="FirstVisibleColumn" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DataGridColumn">
+      <Item value="Header" priority="1" />
+      <Item value="CellStyle" priority="1" />
+      <Item value="HeaderStyle" priority="0" />
+      <Item value="Width" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.FontFamily">
+      <Item value="Families" priority="0" />
+      <Item value="GenericSerif" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Black" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DataGridRow">
+      <Item value="Item" priority="0" />
+      <Item value="Height" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.DataGridLength">
+      <Item value="Value" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TimberPlantController.BatchList">
+      <Item value="CurrentDataGrid" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ElementAt`1" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
+      <File id="FF6E83C1-5E41-4AC0-B0F0-E06D65C092FB/f:CryptographerTest.cs" caret="469" fromTop="18" />
+      <File id="FF6E83C1-5E41-4AC0-B0F0-E06D65C092FB/f:SerializeTest.cs" caret="936" fromTop="22" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:Authenticate.xaml" caret="1138" fromTop="14" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:Authenticate.xaml.cs" caret="1734" fromTop="22" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:SaveArchive.xaml" caret="807" fromTop="13" />
+      <File id="DA75A52A-3D24-457C-9360-45ABFB7F8EE3/f:Serializer.cs" caret="668" fromTop="15" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:SaveArchive.xaml.cs" caret="904" fromTop="30" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:CommunicationSetup.xaml" caret="3961" fromTop="7" />
+      <File id="BA56DC3A-2789-4339-BE1D-B00C030B8289/f:SensorDataModel.cs" caret="1660" fromTop="27" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:CommunicationSetup.xaml.cs" caret="990" fromTop="19" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:CommunicationConfigViewModel.cs" caret="1778" fromTop="23" />
+      <File id="F6493270-E791-485F-A514-A252519B2BFF/f:Scanner.cs" caret="130" fromTop="5" />
+      <File id="DA75A52A-3D24-457C-9360-45ABFB7F8EE3/f:Cryptographer.cs" caret="2066" fromTop="29" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:ThirdEyeApplicationContext.cs" caret="946" fromTop="22" />
+      <File id="BA56DC3A-2789-4339-BE1D-B00C030B8289/f:SensorModel.cs" caret="2669" fromTop="28" />
+      <File id="F6493270-E791-485F-A514-A252519B2BFF/f:ScanDataParser.cs" caret="1050" fromTop="18" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:GraphControl.xaml" caret="1009" fromTop="12" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:GraphControl.xaml.cs" caret="3452" fromTop="34" />
+      <File id="F6493270-E791-485F-A514-A252519B2BFF/f:SerialIoLayer.cs" caret="3073" fromTop="23" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:BatchList.xaml.cs" caret="900" fromTop="30" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:BatchList.xaml" caret="466" fromTop="8" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:MainWindow.xaml.cs" caret="8762" fromTop="21" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:MainWindow.xaml" caret="1057" fromTop="7" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="8490" fromTop="22" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:BarCodeDemoCtrl.xaml" caret="1343" fromTop="7" />
+      <File id="D3A93771-6A17-41D7-B5C6-FBC8A7B46F43/f:Code128Content.cs" caret="1196" fromTop="9" />
+      <File id="D3A93771-6A17-41D7-B5C6-FBC8A7B46F43/f:Code128Rendering.cs" caret="7188" fromTop="19" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:BarCodeDemoCtrl.xaml.cs" caret="1434" fromTop="16" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="10204" fromTop="19" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="13639" fromTop="29" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="12476" fromTop="25" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="11646" fromTop="13" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="12129" fromTop="25" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="3468" fromTop="19" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:BatchList.xaml.cs" caret="727" fromTop="24" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:BatchList.xaml.cs" caret="900" fromTop="30" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="2737" fromTop="30" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="5161" fromTop="18" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="5799" fromTop="8" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="13597" fromTop="28" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="13049" fromTop="4" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="13288" fromTop="10" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="5719" fromTop="8" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="1507" fromTop="6" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="2424" fromTop="30" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="2015" fromTop="12" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="2424" fromTop="19" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="2425" fromTop="23" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:MainWindow.xaml" caret="1074" fromTop="7" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:MainWindow.xaml.cs" caret="8826" fromTop="27" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="1795" fromTop="13" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="1935" fromTop="16" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="1334" fromTop="0" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="6463" fromTop="2" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/d:Common/f:PrintSenorDetails.cs" caret="8490" fromTop="22" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:BarCodeDemoCtrl.xaml" caret="1374" fromTop="16" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:BarCodeDemoCtrl.xaml" caret="1343" fromTop="7" />
+      <File id="53AB8B82-A668-4FE5-A876-153414E91C65/f:BarCodeDemoCtrl.xaml.cs" caret="1343" fromTop="16" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

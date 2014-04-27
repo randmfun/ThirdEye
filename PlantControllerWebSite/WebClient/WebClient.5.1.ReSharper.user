@@ -24,20 +24,31 @@
       <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:About.aspx" caret="439" fromTop="12" />
       <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Site.Master" caret="2273" fromTop="7" />
       <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:About.aspx.cs" caret="0" fromTop="0" />
-      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="722" fromTop="16" />
       <File id="D3A93771-6A17-41D7-B5C6-FBC8A7B46F43/f:Code128Rendering.cs" caret="7188" fromTop="17" />
-      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="922" fromTop="19" />
+      <File id="DA75A52A-3D24-457C-9360-45ABFB7F8EE3/f:Serializer.cs" caret="196" fromTop="8" />
+      <File id="DA75A52A-3D24-457C-9360-45ABFB7F8EE3/f:Cryptographer.cs" caret="1214" fromTop="13" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="650" fromTop="13" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="698" fromTop="3" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Barcode/f:BarcodeManager.cs" caret="167" fromTop="7" />
+      <File id="B32D34F9-EBF1-431D-BB53-FC1CE7D2B9F9/f:UnitTest1.cs" caret="394" fromTop="15" />
     </RecentFiles>
     <RecentEdits>
       <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Default.aspx" caret="0" fromTop="0" />
       <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="164" fromTop="0" />
       <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:Site.Master" caret="1820" fromTop="13" />
       <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="562" fromTop="11" />
-      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="762" fromTop="16" />
-      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="707" fromTop="16" />
-      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="405" fromTop="12" />
-      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="979" fromTop="19" />
-      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="691" fromTop="14" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="806" fromTop="16" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="1238" fromTop="19" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="950" fromTop="14" />
+      <File id="DA75A52A-3D24-457C-9360-45ABFB7F8EE3/f:Serializer.cs" caret="692" fromTop="13" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Barcode/f:BarcodeManager.cs" caret="212" fromTop="9" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="492" fromTop="11" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx" caret="650" fromTop="13" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="422" fromTop="4" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="1429" fromTop="17" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/f:BarCode.aspx.cs" caret="640" fromTop="2" />
+      <File id="0E40E5AB-3776-4FF1-8B7D-C3E979C799EA/d:Barcode/f:BarcodeManager.cs" caret="322" fromTop="11" />
+      <File id="B32D34F9-EBF1-431D-BB53-FC1CE7D2B9F9/f:UnitTest1.cs" caret="383" fromTop="14" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -62,12 +73,34 @@
       <Item value="text" priority="0" />
       <Item value="myimg" priority="0" />
       <Item value="ms" priority="0" />
+      <Item value="string" priority="1" />
+      <Item value="this" priority="0" />
+      <Item value="Barcode" priority="0" />
+      <Item value="public" priority="1" />
+      <Item value="sensorDataModel" priority="0" />
+      <Item value="return" priority="0" />
+      <Item value="static" priority="0" />
+      <Item value="sensorModel" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="null" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.IO.MemoryStream">
       <Item value="GetBuffer`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Convert">
       <Item value="ToBase64String`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WebClient.BarCode">
+      <Item value="txtBarCodeFile" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.TextBox">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@WebClient.Barcode.BarcodeManager">
+      <Item value="GenerateBarCodeString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.barcode_aspx">
+      <Item value="get_Trace`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
