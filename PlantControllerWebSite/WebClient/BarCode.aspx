@@ -8,7 +8,7 @@
         Bar Code
     </h2>
     <p>
-        <asp:Panel ID="Panel1" runat="server" GroupingText="Select the Log (.bin) File">
+        &nbsp;<asp:Panel ID="Panel1" runat="server" GroupingText="Select the Log (.bin) File">
             &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:FileUpload ID="FileUploadControl" runat="server" Width="300" />
             <br />

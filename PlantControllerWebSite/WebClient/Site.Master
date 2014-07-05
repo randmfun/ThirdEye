@@ -14,38 +14,49 @@
         <div class="header">
             <div class="title">
                 <h1>
-                    Scorpian Controls 
+                    Scorpian Controls
                 </h1>
             </div>
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        ]
                     </AnonymousTemplate>
                     <LoggedInTemplate>
-                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
                     </LoggedInTemplate>
                 </asp:LoginView>
             </div>
             <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/BarCode.aspx" Text="Bar Code"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
-                    </Items>
-                </asp:Menu>
+                <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+                    <LoggedInTemplate>
+                        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                            IncludeStyleBlock="false" Orientation="Horizontal">
+                            <Items>
+                                <%--<asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />--%>
+                                <asp:MenuItem NavigateUrl="~/BarCode.aspx" Text="Bar Code" />
+                                <asp:MenuItem NavigateUrl="~/Reports/Reports.aspx" Text="BatchList" />
+                                <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
+                                <asp:MenuItem NavigateUrl="~/Account/Register.aspx" Text="Create User" />
+                            </Items>
+                        </asp:Menu>
+                    </LoggedInTemplate>
+                </asp:LoginView>
             </div>
         </div>
         <div class="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         </div>
         <div class="clear">
         </div>
     </div>
     <div class="footer">
-        
     </div>
     </form>
 </body>
