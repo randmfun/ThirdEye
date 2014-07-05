@@ -19,9 +19,9 @@ namespace WebClient.Account
                 // Bind roles to ListBox.
                 var RolesListBox = RegisterUserWizardStep.ContentTemplateContainer.FindControl("RolesListBox") as ListBox;
 
-                rolesArray = Roles.GetAllRoles();
-                RolesListBox.DataSource = rolesArray;
-                RolesListBox.DataBind();
+                //rolesArray = Roles.GetAllRoles();
+                //RolesListBox.DataSource = rolesArray;
+                //RolesListBox.DataBind();
             }
             RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
         }

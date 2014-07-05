@@ -170,7 +170,7 @@ namespace TimberPlantController
         {
             var _sensorDataModel = new SensorDataModel();
             _sensorDataModel.SensorCollection = new ObservableCollection<SensorModel>();
-            for (int i = 1, j=10, k=20; i < 50; i++, j++, k++)
+            for (int i = 20, j=21, k=22; i < 90; i++, j++, k++)
             {
                 int year = 1870 + i;
                 int month = i%10 + 1;

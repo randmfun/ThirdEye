@@ -71,10 +71,10 @@
                                 <asp:TextBox ID="Address" TextMode="MultiLine" Width="95%" Rows="5" runat="server"
                                     CssClass="textEntry"></asp:TextBox>
                             </p>
-                            <p>
+<%--                            <p>
                                 <asp:Label ID="Label3" runat="server" AssociatedControlID="ConfirmPassword">Roles:</asp:Label>
                                 <asp:ListBox id="RolesListBox" runat="server"/>
-                            </p>
+                            </p>--%>
                         </fieldset>
                         <p class="submitButton">
                             <asp:Button ID="CreateUserButton" runat="server" CommandName="MoveNext" Text="Create User"

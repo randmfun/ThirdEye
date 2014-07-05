@@ -41,7 +41,6 @@
                             <Items>
                                 <%--<asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />--%>
                                 <asp:MenuItem NavigateUrl="~/BarCode.aspx" Text="Bar Code" />
-                                <asp:MenuItem NavigateUrl="~/Reports/Reports.aspx" Text="BatchList" />
                                 <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
                                 <asp:MenuItem NavigateUrl="~/Account/Register.aspx" Text="Create User" />
                             </Items>

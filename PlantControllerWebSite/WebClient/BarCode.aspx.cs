@@ -28,14 +28,19 @@ namespace WebClient
 
         }
 
-        public string GetGenerateBarCodeText(SensorDataModel sensorDataModel)
+        public bool GetGenerateBarCodeText(SensorDataModel sensorDataModel, out string generatedText)
         {
+            generatedText = string.Empty;
+
             var barCodeString = BarcodeManager.GenerateBarCodeString(sensorDataModel);
 
-            Code128Content content = new Code128Content(barCodeString);
-            var text = string.Join(string.Empty, content.Codes);
+            if (string.IsNullOrEmpty(barCodeString))
+                return false;
 
-            return text;
+            Code128Content content = new Code128Content(barCodeString);
+            generatedText = string.Join(string.Empty, content.Codes);
+
+            return true;
         }
 
         public string GetImageText(string generateBarCodeText)
@@ -94,24 +99,31 @@ namespace WebClient
                         //Save to disk
                         this.FileUploadControl.SaveAs(binSaveFilePath);
 
-                        this.lblUploadedFileNameContent.Text = fileName;
-
                         var sensorDataModel = GetSensorDataModel(binSaveFilePath);
-                        var generatedBarCodeText = GetGenerateBarCodeText(sensorDataModel);
-                        var strImageContent = GetImageBuffer(generatedBarCodeText);
+                        string generatedBarCodeText = string.Empty;
+                        
+                        var validBinFile = GetGenerateBarCodeText(sensorDataModel, out generatedBarCodeText);
 
-                        using (FileStream fs = File.Create(imageSavePathName))
+                        if (validBinFile)
                         {
-                            // Add some text to file
-                            Byte[] title = strImageContent;
-                            fs.Write(title, 0, title.Length);
+                            var strImageContent = GetImageBuffer(generatedBarCodeText);
+
+                            using (FileStream fs = File.Create(imageSavePathName))
+                            {
+                                // Add some text to file
+                                Byte[] title = strImageContent;
+                                fs.Write(title, 0, title.Length);
+                            }
+
+                            UpdateUi(true, fileName, randomFileName);
+
+                            var binFileBytes = new byte[this.FileUploadControl.PostedFile.InputStream.Length];
+                            this.FileUploadControl.PostedFile.InputStream.Read(binFileBytes, 0, binFileBytes.Length);
                         }
-
-                        this.imgBarCode.ImageUrl = @"Data/" + randomFileName;
-
-                        var binFileBytes = new byte[this.FileUploadControl.PostedFile.InputStream.Length];
-                        this.FileUploadControl.PostedFile.InputStream.Read(binFileBytes, 0, binFileBytes.Length);
-
+                        else
+                        {
+                            UpdateUi(false, null, null);
+                        }
                         //StoreToDb(binFileBytes, sensorDataModel, generatedBarCodeText);
 
                         //Delete the file
@@ -126,6 +138,26 @@ namespace WebClient
             catch (Exception exception)
             {
                 this.lblUploadedFileNameContent.Text = exception.Message;
+            }
+        }
+
+        private void UpdateUi(bool sucess, string fileName, string imageFileName)
+        {
+            this.imgBarCode.Visible = sucess;
+            this.lblBarCode.Visible = sucess;
+
+            this.lblFileName.Visible = sucess;
+            this.lblUploadedFileNameContent.Visible = sucess;
+            this.lblGeneratedBarCodeContent.Visible = sucess;
+
+            if (sucess)
+            {
+                this.lblUploadedFileNameContent.Text = fileName;
+                this.imgBarCode.ImageUrl = @"Data/" + imageFileName;
+            }else
+            {
+                this.lblUploadedFileNameContent.Visible = true;
+                this.lblUploadedFileNameContent.Text = "Invalid File : " + fileName + " Barcode Cannot be generated";
             }
         }
 

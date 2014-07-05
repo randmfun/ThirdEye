@@ -18,4 +18,8 @@ PlantOperatorClient/TimberPlantController/TimberPlantController/obj/
 PlantOperatorClient/TimberPlantController/_ReSharper.TimberPlantController/
 PlantControllerWebSite/WebClient/Data/
 PlantControllerWebSite/WebClient/_ReSharper.WebClient/
+PlantOperatorClient/TimberPlantController/ScanLib/bin/
+PlantOperatorClient/TimberPlantController/ScanLib/obj/
+PlantOperatorClient/TimberPlantController/ScanLibTest/bin/
+PlantOperatorClient/TimberPlantController/ScanLibTest/obj/
 

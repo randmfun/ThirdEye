@@ -10,6 +10,9 @@ namespace WebClient.Barcode
     {
         public static string GenerateBarCodeString(SensorDataModel sensorDataModel)
         {
+            if (!IsValid(sensorDataModel))
+                return string.Empty;
+
             const string startThreshold = "25";
             const string endThreshold = "80";
             
@@ -43,6 +46,22 @@ namespace WebClient.Barcode
             return string.Format("{0}{1}{2}{3}", 
                 startTime.Hour.ToString(), startTime.Minute, 
                 endTime.Hour, endTime.Minute);
+        }
+
+        public static bool IsValid(SensorDataModel sensorDataModel)
+        {
+            var enumerator = sensorDataModel.SensorCollection.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                if (int.Parse(enumerator.Current.Sensor2) < 20
+                    || int.Parse(enumerator.Current.Sensor2) > 80)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+
         }
     }
 }
